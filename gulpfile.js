@@ -1,9 +1,11 @@
 // Include Plugins
+const autoprefixer = require('autoprefixer');
+const cssnano = require('cssnano');
 const del = require('del');
-const imagemin = require('imagemin');
 const gulp = require('gulp');
 const gulpConcat = require('gulp-concat');
-const gulpCssnano = require('gulp-cssnano');
+const gulpImagemin = require('gulp-imagemin');
+const gulpPostcss = require('gulp-postcss');
 const gulpPug = require('gulp-pug');
 const gulpSass = require('gulp-sass');
 const gulpHtmlmin = require('gulp-htmlmin');
@@ -40,7 +42,7 @@ const paths = {
 
 function asset(){
   return gulp.src(paths.asset.src)
-    .pipe(imagemin())
+    .pipe(gulpImagemin())
     .pipe(gulp.dest(paths.asset.dest))
     .pipe(browserSync.stream());
 }
@@ -52,7 +54,9 @@ function html() {
 }
 
 function css() {
-  return console.log('css');
+  return gulp.src(paths.css.src)
+    .pipe(gulpPostcss( [autoprefixer(), cssnano()] ))
+    .pipe(gulp.dest(paths.css.dest));
 }
 
 function js() {
@@ -101,4 +105,4 @@ exports.js = js;
 exports.pug = pug;
 exports.scss = scss;
 exports.watch = watch;
-exports.default = gulp.series(watch);
+exports.default = gulp.series(pug, scss, html, css, js, asset, watch);
