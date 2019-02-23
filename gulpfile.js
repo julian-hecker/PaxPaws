@@ -1,9 +1,20 @@
 // Include Plugins
+const del = require('del');
+const imagemin = require('imagemin');
 const gulp = require('gulp');
+const gulpConcat = require('gulp-concat');
+const gulpCssnano = require('gulp-cssnano');
+const gulpPug = require('gulp-pug');
 const gulpSass = require('gulp-sass');
+const gulpHtmlmin = require('gulp-htmlmin');
+const gulpUglify = require('gulp-uglify');
 const browserSync = require('browser-sync').create();
 
 const paths = {
+  asset: {
+    src: 'src/assets/**/*.*',
+    dest: 'dist/assets/'
+  },
   html: {
     src: 'src/html/**/*.html',
     dest: 'dist/'
@@ -14,11 +25,11 @@ const paths = {
   },
   js: {
     src: 'src/js/**/*.js',
-    dest: 'dist/js'
+    dest: 'dist/js/'
   },
   pug: {
     src: 'src/pug/**/*.pug',
-    dest: ''
+    dest: 'src/html/'
   },
   scss: {
     src: 'src/scss/**/*.+(scss|sass)',
@@ -27,20 +38,34 @@ const paths = {
   watch: 'dist/**/*.*'
 };
 
+function asset(){
+  return gulp.src(paths.asset.src)
+    .pipe(imagemin())
+    .pipe(gulp.dest(paths.asset.dest))
+    .pipe(browserSync.stream());
+}
+
 function html() {
-  console.log("html");
+  return gulp.src(paths.html.src)
+    .pipe(gulpHtmlmin({ collapseWhitespace: true }))
+    .pipe(gulp.dest(paths.html.dest));
 }
 
 function css() {
-  console.log('css');
+  return console.log('css');
 }
 
 function js() {
-  console.log('js');
+  return gulp.src(paths.js.src)
+    .pipe(gulpConcat('main.js'))
+    .pipe(gulpUglify())
+    .pipe(gulp.dest(paths.js.dest));
 }
 
 function pug() {
-  console.log('pug');
+  return gulp.src(paths.pug.src)
+    .pipe(gulpPug({pretty: true}))
+    .pipe(gulp.dest(paths.pug.dest));
 }
 
 function scss() {
@@ -51,13 +76,14 @@ function scss() {
 }
 
 function watch() {
-  console.log('before init');
+
   browserSync.init({
     server: {
       baseDir: 'dist/'
     }
   });
-  console.log('after init');
+
+  gulp.watch(paths.asset.src, asset);
   gulp.watch(paths.html.src, html);
   gulp.watch(paths.css.src, css);
   gulp.watch(paths.js.src, js);
@@ -68,6 +94,11 @@ function watch() {
 
 
 // exports.build = gulp.series();
-exports.scss = gulp.series(scss);
-exports.watch = gulp.series(watch);
+exports.asset = asset;
+exports.html = html;
+exports.css = css;
+exports.js = js;
+exports.pug = pug;
+exports.scss = scss;
+exports.watch = watch;
 exports.default = gulp.series(watch);
