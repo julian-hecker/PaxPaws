@@ -111,4 +111,6 @@ exports.js = js;
 exports.pug = pug;
 exports.scss = scss;
 exports.watch = watch;
+
+exports.build = gulp.series(clean, pug, scss, html, css, js, asset);
 exports.default = gulp.series(clean, pug, scss, html, css, js, asset, watch);
