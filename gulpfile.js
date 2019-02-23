@@ -40,6 +40,12 @@ const paths = {
   watch: 'dist/**/*.*'
 };
 
+function cleanFiles() {
+  return del([
+    'dist/**/*'
+  ])
+}
+
 function asset(){
   return gulp.src(paths.asset.src)
     .pipe(gulpImagemin())
@@ -55,7 +61,7 @@ function html() {
 
 function css() {
   return gulp.src(paths.css.src)
-    .pipe(gulpPostcss( [autoprefixer(), cssnano()] ))
+    .pipe(gulpPostcss( [autoprefixer( {remove: false} ), cssnano()] ))
     .pipe(gulp.dest(paths.css.dest));
 }
 
@@ -97,7 +103,7 @@ function watch() {
 }
 
 
-// exports.build = gulp.series();
+// exports.clean = cleanFiles
 exports.asset = asset;
 exports.html = html;
 exports.css = css;
@@ -105,4 +111,4 @@ exports.js = js;
 exports.pug = pug;
 exports.scss = scss;
 exports.watch = watch;
-exports.default = gulp.series(pug, scss, html, css, js, asset, watch);
+exports.default = gulp.series(cleanFiles, pug, scss, html, css, js, asset, watch);
