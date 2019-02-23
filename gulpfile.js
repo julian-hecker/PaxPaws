@@ -40,7 +40,7 @@ const paths = {
   watch: 'dist/**/*.*'
 };
 
-function cleanFiles() {
+function clean() {
   return del([
     'dist/**/*'
   ])
@@ -103,7 +103,7 @@ function watch() {
 }
 
 
-// exports.clean = cleanFiles
+exports.clean = clean
 exports.asset = asset;
 exports.html = html;
 exports.css = css;
@@ -111,4 +111,4 @@ exports.js = js;
 exports.pug = pug;
 exports.scss = scss;
 exports.watch = watch;
-exports.default = gulp.series(cleanFiles, pug, scss, html, css, js, asset, watch);
+exports.default = gulp.series(clean, pug, scss, html, css, js, asset, watch);
