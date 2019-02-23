@@ -7,7 +7,29 @@
 // 5 - Components
 // 6 - Utilities
 
+@import './abstracts/variables';
+
 body {
   margin: 0;
   display: grid;
+  font-family: 'Roboto Slab', sans-serif;
+}
+h1, h2, h3 {
+  margin: .25rem 0;
+  font-family: 'Luckiest Guy', serif;
+}
+.container-responsive {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  @media screen and (min-width: $breakpoint-md) {
+    flex-direction: row;
+  }
+}
+
+.benefits {
+  .benefit {
+    background-color: yellow;
+  }
 }
