@@ -1,4 +1,8 @@
 <!DOCTYPE html>
+<!-- TODO:
+Learn CSS Grid, implement on here
+
+-->
 <html lang="en">
   <head>
     <meta charset="UTF-8"/>
@@ -8,13 +12,15 @@
     <meta name="keywords" content="Dog Walker, Bellmore, Merrick, Nassau, Dog, Pet, Sitting"/>
     <title>Pax Paws Pet Services</title>
     <link rel="stylesheet" href="./css/main.css"/>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Luckiest+Guy|Roboto|Roboto+Slab"/>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Luckiest+Guy|Roboto|Roboto+Slab|Roboto+Mono"/>
     <script src="./js/main.js" defer="defer"></script>
   </head>
   <body>
     <div class="wrapper">
       <nav class="nav">
-        <div class="branding"></div>
+        <div class="branding">
+          <h1>Pax Paws</h1>
+        </div>
         <div class="nav">
           <ul>
             <li><a href="./index.html">Home</a></li>
@@ -27,39 +33,67 @@
       </header>
       <main class="main">
         <section class="benefits">
-          <h1>~ Your Pets are Our Family ~</h1>
+          <h2>~ Your Pets are Our Family ~</h2>
           <div class="container-responsive">
             <div class="benefits__care benefit">
-              <h2>Personalized Care</h2>
+              <h3>Personalized Care</h3>
               <p>We really treat your pets as though they were our own family!</p>
             </div>
             <div class="benefits__health benefit">
-              <h2>Happy, Healthy Pets</h2>
+              <h3>Happy, Healthy Pets</h3>
               <p>We'll help take care of and exercise your pets as they need!</p>
             </div>
             <div class="benefits__insurance benefit">
-              <h2>Safe & Insured</h2>
+              <h3>Safe & Insured</h3>
               <p>Your pets' safety is our priority! <wbr> We're very responsible and we're also insured, just in case!</p>
             </div>
           </div>
         </section>
         <section class="about">
-          <h1>About Us</h1>
+          <h2>About Us</h2>
+          <p>Pax Paws was founded back in 2017 by <strong>Julian</strong> and <strong>Valeria</strong>, avid pet lovers!</p>
+          <p>We are professionals and animal lovers who will make sure your dogs, cats, and other pets are <strong>safe</strong>, <strong>happy</strong>, and <strong>well-cared for</strong>!</p>
+          <p>Give us a call or fill out the form to have us help for
+            <ul> 
+              <li>your next overtime shift,</li>
+              <li>a nice vacation,</li>
+              <li>or any other time you're busy!</li>
+            </ul>
+          </p><a class="phone" href="tel:+15164187297">(516) 418 - PAWS</a><a class="button" href="team.html" target="_blank">More About Us!</a>
         </section>
         <section class="services">
-          <h1>Services</h1>
-          <h2>Walks & Runs</h2>
+          <h2>Services</h2>
+          <h3>Walks & Runs</h3>
           <p>30 Minute: <u>$25</u></p>
           <p>60 Minute: <u>$35</u></p>
-          <h2>Visits</h2>
+          <h3>Visits</h3>
           <p>30 Minute: <u>$25</u></p>
           <p>60 Minute: <u>$35</u> </p>
-          <h2>Sitting</h2>
-          <p>Overnight: <u>$40</u></p>
+          <h3>Sitting</h3>
+          <p>Overnight Sitting: <u>$40</u></p>
         </section>
-        <section class="testimonials"></section>
-        <section class="contact-form"></section>
-        <section class="form"></section>
+        <section class="testimonials">
+          <h2>What's Everyone Saying?</h2>
+          <blockquote>
+            <p>I called Pax Paws last minute on holiday weekend. I needed a dog sitter for my Bernese Mountain Dog when all the doggie day care centers were full. I gave Julian a chance, enticed by his caring pictures and story acknowledging his entrepreneurial endeavors.</p>
+            <p>Julian answered my first call enthusiastically, flexible to my requests. He surpassed my expectations with kindness, intelligence, and wherewithal. Julian and Valeria are compassionate, genuine, and a perfect fit to my needs. Very reasonable prices for exceptional services! Will have me employing them in the future.</p>
+            <cite>--Jasmine from Massapequa</cite>
+          </blockquote>
+        </section>
+        <section class="contact-form">
+          <form>
+            <h2>Talk to us!</h2>
+            <label for="name">What's your name?</label>
+            <input type="text" name="name" required="required"/>
+            <label for="phone">What's your phone?</label>
+            <input type="text" name="phone" required="required"/>
+            <label for="location">Where are you located?</label>
+            <input type="text" name="location" required="required"/>
+            <label for="service">What do you need?</label>
+            <textarea name="service" cols="30" rows="10"></textarea>
+            <input type="submit" value="Submit"/>
+          </form>
+        </section>
         <section class="gallery"></section>
       </main>
       <footer class="footer"></footer>
