@@ -1,0 +1,107 @@
+.wrapper {
+  margin: 1rem;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 1rem;
+  grid-template-areas: 
+    "navbar"
+    "header"
+    "benefits"
+    "about"
+    "testimonials"
+    "services"
+    "contact-form"
+    "footer";
+
+  & > * {
+    padding: 1rem;
+  }
+
+  @media screen and (min-width: $breakpoint-sm) {
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+      "navbar navbar"
+      "header header"
+      "benefits benefits"
+      "about gallery"
+      "testimonials testimonials"
+      "contact-form services"
+      "footer footer";
+  }
+
+}
+
+.navbar {
+  grid-area: navbar;
+}
+
+.header {
+  grid-area: header;
+}
+
+.benefits {
+  grid-area: benefits;
+  display: grid;
+  grid-template-areas: 
+    "benefits__title"
+    "benefits__care"
+    "benefits__health"
+    "benefits__safe";
+  grid-gap: 1rem;
+  text-align: center;
+
+  &__title {
+    grid-area: benefits__title;
+  }
+
+  &__care {
+    grid-area: benefits__care;
+  }
+
+  &__health {
+    grid-area: benefits__health;
+  }
+
+  &__safe {
+    grid-area: benefits__safe;
+  }
+
+  @media screen and (min-width: $breakpoint-sm) {
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas: 
+      "benefits__title benefits__title benefits__title"
+      "benefits__care benefits__health benefits__safe"
+  }
+}
+
+.about {
+  grid-area: about;
+  text-align: center;
+  ul {
+    text-align: center;
+  }
+  li {
+    list-style-position: inside;
+  }
+}
+
+.services {
+  grid-area: services;
+  text-align: center;
+}
+
+.testimonials {
+  grid-area: testimonials;
+}
+
+.contact-form {
+  grid-area: contact-form;
+}
+
+.gallery {
+  grid-area: gallery;
+}
+
+.footer {
+  grid-area: footer;
+}

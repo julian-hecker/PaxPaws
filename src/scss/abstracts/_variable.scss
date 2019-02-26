@@ -169,12 +169,3 @@ $breakpoints: (
   '-lg': $breakpoint-lg,
   '-xl': $breakpoint-xl
 );
-
-:root {
-  @each $color, $value in $color-palette {
-    --#{$color}: #{$value};
-  }
-  @each $breakpoint, $value in $breakpoints {
-    --breakpoint#{$breakpoint}: #{$value};
-  }
-}

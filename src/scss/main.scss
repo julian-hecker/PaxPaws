@@ -1,23 +1,21 @@
 // =-= ITCSS =-= //
 // 0 - Vendors
-// 1 - Settings
-// 2 - Tools
-// 3 - Generic
-// 4 - Elements
-// 5 - Components
-// 6 - Utilities
+// 1 - Abstracts
+//        variables
+//        mixins
+// 2 - Bases
+//        root
+//        reset
+//        elements
+// 3 - Layouts??
+// 4 - Components
 
-@import './abstracts/variables';
+@import './abstracts/variable';
+// @import './abstracts/mixins';
 
-body {
-  margin: 0;
-  font-family: 'Roboto Slab', sans-serif;
-}
-h1, h2, h3 {
-  margin: .25rem 0;
-  font-family: 'Luckiest Guy', serif;
-}
+@import './bases/root';
+// @import './bases/reset';
+@import './bases/element';
 
-form > * {
-  display: block;
-}
+@import './components/layout';
+
