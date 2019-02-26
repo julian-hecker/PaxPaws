@@ -60,7 +60,7 @@ form > * {
   display: grid;
   grid-template-columns: 1fr;
   grid-gap: 1rem;
-  grid-template-areas: "navbar" "header" "benefits" "about" "testimonials" "services" "contact-form" "footer"; }
+  grid-template-areas: "navbar" "header" "benefits" "about" "testimonials" "services" "contact-form" "gallery" "footer"; }
   .wrapper > * {
     padding: 1rem; }
   @media screen and (min-width: 600px) {
