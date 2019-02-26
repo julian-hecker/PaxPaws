@@ -28,65 +28,65 @@ html(lang='en')
       header.header
         .carousel
 
-      main.main
-        section.benefits
-          h2 ~ Your Pets are Our Family ~
-          .container-responsive
-            .benefits__care.benefit
-              h3 Personalized Care
-              p We really treat your pets as though they were our own family!
-            .benefits__health.benefit
-              h3 Happy, Healthy Pets
-              p We'll help take care of and exercise your pets as they need!
-            .benefits__insurance.benefit
-              h3 Safe & Insured
-              p Your pets' safety is our priority! <wbr> We're very responsible and we're also insured, just in case!
-        section.about
-          h2 About Us
-          p Pax Paws was founded back in 2017 by <strong>Julian</strong> and <strong>Valeria</strong>, avid pet lovers!
-          p We are professionals and animal lovers who will make sure your dogs, cats, and other pets are <strong>safe</strong>, <strong>happy</strong>, and <strong>well-cared for</strong>!
-          p Give us a call or fill out the form to have us help for
-            ul 
-              li your next overtime shift,
-              li a nice vacation,
-              li or any other time you're busy!
-          a.phone(href='tel:+15164187297') (516) 418 - PAWS
-          a.button(href='team.html', target='_blank',) More About Us!
-        section.services
-          h2 Services
-          h3 Walks & Runs
-          p 30 Minute: <u>$25</u>
-          p 60 Minute: <u>$35</u>
-          h3 Visits
-          p 30 Minute: <u>$25</u>
-          p 60 Minute: <u>$35</u> 
-          h3 Sitting
-          p Overnight Sitting: <u>$40</u>
+      section.benefits
+        h2.benefits__title ~ Your Pets are Our Family ~
+        .benefits__care.benefit
+          h3 Personalized Care
+          p We really treat your pets as though they were our own family!
+        .benefits__health.benefit
+          h3 Happy, Healthy Pets
+          p We'll help take care of and exercise your pets as they need!
+        .benefits__insurance.benefit
+          h3 Safe &amp; Insured
+          p Your pets' safety is our priority! <wbr> We're very responsible and we're also insured, just in case!
+      section.about
+        h2 About Us
+        p Pax Paws was founded back in 2017 by <strong>Julian</strong> and <strong>Valeria</strong>, avid pet lovers!
+        p We are professionals and animal lovers who will make sure your dogs, cats, and other pets are <strong>safe</strong>, <strong>happy</strong>, and <strong>well-cared for</strong>!
+        p Give us a call or fill out the form to have us help for
+          ul 
+            li your next overtime shift,
+            li a family reunion,
+            li a nice vacation,
+            li or any other time you're busy!
+        a.phone(href='tel:+15164187297') (516) 418 - PAWS
+        a.button(href='team.html', target='_blank',) More About Us!
+      section.services
+        h2 Services
+        h3 Walks &amp; Runs
+        p 30 Minute: <u>$25</u>
+        p 60 Minute: <u>$35</u>
+        h3 Visits
+        p 30 Minute: <u>$25</u>
+        p 60 Minute: <u>$35</u> 
+        h3 Sitting
+        p Overnight Sitting: <u>$40</u>
 
 
-        section.testimonials
-          h2 What's Everyone Saying?
+      section.testimonials
+        h2 What's Everyone Saying?
+        .testimonials__carousel
           blockquote
               p I called Pax Paws last minute on holiday weekend. I needed a dog sitter for my Bernese Mountain Dog when all the doggie day care centers were full. I gave Julian a chance, enticed by his caring pictures and story acknowledging his entrepreneurial endeavors.
               p Julian answered my first call enthusiastically, flexible to my requests. He surpassed my expectations with kindness, intelligence, and wherewithal. Julian and Valeria are compassionate, genuine, and a perfect fit to my needs. Very reasonable prices for exceptional services! Will have me employing them in the future.
               cite --Jasmine from Massapequa
-        section.contact-form
-          
-          form(data-netlify='true')
-            h2 Talk to us!
-            label(for='name') What's your name?
-            input(type='text', name='name', required)
+      section.contact-form
+        
+        form(data-netlify='true')
+          h2 Talk to us!
+          label(for='name') What's your name?
+          input(type='text', name='name', required)
 
-            label(for='phone') What's your phone?
-            input(type='text', name='phone', required)
+          label(for='phone') What's your phone?
+          input(type='text', name='phone', required)
 
-            label(for='location') Where are you located?
-            input(type='text', name='location', required)
+          label(for='location') Where are you located?
+          input(type='text', name='location', required)
 
-            label(for='service') What do you need?
-            textarea(name='service', cols='30', rows='10')
+          label(for='service') What do you need?
+          textarea(name='service', cols='30', rows='10')
 
-            input(type='submit', value='Submit')
-        section.gallery
+          input(type='submit', value='Submit')
+      section.gallery
       footer.footer
 
