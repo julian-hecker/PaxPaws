@@ -44,19 +44,28 @@
   --breakpoint-lg: 1200px;
   --breakpoint-xl: 1600px; }
 
+*, *::before, *::after {
+  box-sizing: inherit; }
+
+html {
+  box-sizing: border-box; }
+
+html, body {
+  height: 100%; }
+
 body {
   margin: 0;
+  overflow-x: hidden;
   font-family: 'Roboto Slab', sans-serif; }
 
 h1, h2, h3 {
   margin: .25rem 0;
   font-family: 'Luckiest Guy', serif; }
 
-form > * {
-  display: block; }
-
 .wrapper {
-  margin: 1rem;
+  margin: auto;
+  max-width: 960px;
+  padding: 0 1rem;
   display: grid;
   grid-template-columns: 1fr;
   grid-gap: 1rem;
@@ -110,6 +119,18 @@ form > * {
 
 .contact-form {
   grid-area: contact-form; }
+  .contact-form form {
+    text-align: center; }
+    .contact-form form input, .contact-form form label, .contact-form form textarea {
+      width: 180px;
+      margin-right: auto;
+      margin-left: auto;
+      display: block; }
+    .contact-form form input, .contact-form form textarea {
+      padding: .5rem;
+      margin-top: .25rem;
+      margin-bottom: .75rem;
+      font-family: "Roboto Mono", "Consolas", monospace; }
 
 .gallery {
   grid-area: gallery; }
