@@ -62,10 +62,13 @@ h1, h2, h3 {
   margin: .25rem 0;
   font-family: 'Luckiest Guy', serif; }
 
+nav ul {
+  list-style-type: none;
+  padding-left: 0; }
+
 .wrapper {
   margin: auto;
   max-width: 960px;
-  padding: 0 1rem;
   display: grid;
   grid-template-columns: 1fr;
   grid-gap: 1rem;
@@ -74,14 +77,47 @@ h1, h2, h3 {
     padding: 1rem; }
   @media screen and (min-width: 600px) {
     .wrapper {
-      grid-template-columns: 1fr 1fr;
-      grid-template-areas: "navbar navbar" "header header" "benefits benefits" "about gallery" "testimonials testimonials" "contact-form services" "footer footer"; } }
+      grid-template-columns: 50px 1fr 1fr 50px;
+      grid-template-areas: "navbar navbar navbar navbar" "header header header header" ". benefits benefits ." ". about gallery ." ". testimonials testimonials ." ". contact-form services ." "footer footer footer footer"; } }
 
 .navbar {
-  grid-area: navbar; }
+  grid-area: navbar;
+  padding: 0 1rem;
+  width: 100%;
+  height: 5rem;
+  position: fixed;
+  left: 0;
+  right: 0;
+  display: grid;
+  grid-template-columns: 30% 1fr 30%;
+  grid-template-areas: "nav branding nav-menu";
+  text-align: center;
+  background-color: #fff;
+  box-shadow: 0 0px 5px #b3b3b3; }
+  .navbar .branding {
+    grid-area: branding;
+    display: flex;
+    justify-content: center;
+    align-items: center; }
+  .navbar .nav {
+    grid-area: nav;
+    display: none;
+    justify-content: space-around;
+    align-items: center; }
+  .navbar .nav-menu {
+    grid-area: nav-menu;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center; }
+  @media screen and (min-width: 600px) {
+    .navbar {
+      grid-template-areas: "nav branding nav-menu"; }
+      .navbar .nav {
+        display: flex; } }
 
 .header {
-  grid-area: header; }
+  grid-area: header;
+  margin-top: 5rem; }
 
 .benefits {
   grid-area: benefits;
