@@ -97,6 +97,7 @@ nav ul {
   .navbar .branding {
     grid-area: branding;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center; }
   .navbar .nav {

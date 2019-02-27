@@ -51,6 +51,7 @@
   .branding {
     grid-area: branding;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
   }
