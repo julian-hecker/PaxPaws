@@ -1,0 +1,27 @@
+.menu-toggle-input {
+  &:checked {
+    & + .menu-toggle-label {
+      & > .open-menu {
+        display: none;
+      }
+    }
+    & ~ .nav-menu-list {
+      display: block;
+      position: fixed;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      background-color: white;
+      margin-top: 5rem;
+    }
+  }
+
+  &:not(:checked) {
+    & + .menu-toggle-label {
+      & > .close-menu {
+        display: none;
+      }
+    }
+  }
+}
+
