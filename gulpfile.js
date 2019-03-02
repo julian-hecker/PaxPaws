@@ -14,8 +14,8 @@ const browserSync = require('browser-sync').create();
 
 const paths = {
   asset: {
-    src: 'src/assets/**/*.*',
-    dest: 'dist/assets/'
+    src: 'src/asset/**/*.*',
+    dest: 'dist/asset/'
   },
   html: {
     src: 'src/html/**/*.html',
