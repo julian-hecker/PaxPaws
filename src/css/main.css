@@ -419,46 +419,35 @@ nav ul {
 
 .wrapper {
   margin: auto;
-  max-width: 1080px;
   display: grid;
   grid-template-columns: 1fr;
   grid-column-gap: 1rem;
-  grid-template-areas: "navbar"
- "header"
- "benefits"
- "about"
- "testimonials"
- "services"
- "contact-form"
- "gallery"
- "footer"; }
+  grid-template-areas: "navbar" "header" "benefits" "about" "testimonials" "services" "contact-form" "gallery" "footer"; }
   @media screen and (min-width: 600px) {
     .wrapper {
       grid-template-columns: 50px 1fr 1fr 50px;
-      grid-template-areas: "navbar navbar navbar navbar"
- "header header header header"
- ". benefits benefits ."
- ". about gallery ."
- ". testimonials testimonials ."
- ". contact-form services ."
- "footer footer footer footer"; } }
+      grid-template-areas: "navbar navbar navbar navbar" "header header header header" ". benefits benefits ." ". about gallery ." ". testimonials testimonials ." ". contact-form services ." "footer footer footer footer"; } }
 
 .navbar.navbar {
   grid-area: navbar;
   margin: auto;
   padding: 0 1rem;
   width: 100%;
-  max-width: 1080px;
   height: 5rem;
   position: fixed;
   left: 0;
   right: 0;
   display: grid;
   grid-template-columns: 30% 1fr 30%;
-  grid-template-areas: "nav branding nav-menu";
+  grid-template-areas: ". branding nav-menu";
   text-align: center;
   background-color: #fff;
   box-shadow: 0 0px 5px #b3b3b3; }
+  .navbar.navbar a {
+    color: #4d4d4d;
+    text-decoration: none;
+    font-family: "luckiest guy";
+    font-size: 1.2em; }
 
 .navbar .branding {
   grid-area: branding;
@@ -468,11 +457,14 @@ nav ul {
   align-items: center;
   font-size: .7em; }
 
-.navbar .nav {
-  grid-area: nav;
+.navbar .nav-list {
+  grid-area: nav-list;
   display: none;
   justify-content: space-around;
   align-items: center; }
+
+.navbar .nav-cta {
+  display: none; }
 
 .navbar .nav-menu {
   grid-area: nav-menu;
@@ -486,11 +478,17 @@ nav ul {
 
 @media screen and (min-width: 600px) {
   .navbar.navbar {
-    grid-template-areas: "nav branding nav-menu"; }
-  .navbar .nav {
+    grid-template-areas: "nav-cta branding nav-list"; }
+  .navbar .nav-list {
     display: flex; }
   .navbar .branding {
-    font-size: 1em; } }
+    font-size: 1em; }
+  .navbar .nav-cta {
+    display: flex;
+    justify-content: center;
+    align-items: center; }
+  .navbar .nav-menu {
+    display: none; } }
 
 .header.header {
   grid-area: header;
@@ -510,7 +508,12 @@ nav ul {
   justify-content: space-around;
   background-image: linear-gradient(to right, rgba(15, 15, 15, 0.5), rgba(15, 15, 15, 0)); }
   .header .header__text a.cta {
-    color: white;
+    display: inline-block;
+    max-width: max-content;
+    padding: 1rem;
+    border-radius: 100rem;
+    background-color: white;
+    color: #1a1a1a;
     font-size: 2em; }
 
 .header .header__caption {
@@ -525,10 +528,8 @@ nav ul {
 .benefits.benefits {
   grid-area: benefits;
   display: grid;
-  grid-template-areas: "benefits__title"
- "benefits__care"
- "benefits__health"
- "benefits__safe";
+  padding: 1rem 1.5rem;
+  grid-template-areas: "benefits__title" "benefits__care" "benefits__health" "benefits__safe";
   grid-gap: 1rem;
   text-align: center; }
 
@@ -547,26 +548,49 @@ nav ul {
 @media screen and (min-width: 600px) {
   .benefits.benefits {
     grid-template-columns: 1fr 1fr 1fr;
-    grid-template-areas: "benefits__title benefits__title benefits__title"
- "benefits__care benefits__health benefits__safe"; } }
+    grid-template-areas: "benefits__title benefits__title benefits__title" "benefits__care benefits__health benefits__safe"; } }
 
 .about {
   grid-area: about;
+  padding: 1rem 1.5rem;
   text-align: center; }
   .about ul {
+    margin-top: -.5rem;
+    padding: 0;
     text-align: center; }
   .about li {
     list-style-position: inside; }
+  .about .phone {
+    display: block;
+    margin: 1.5rem auto;
+    padding: 1rem;
+    border: 1px solid black;
+    border-radius: 50rem;
+    width: max-content;
+    font-size: 2em;
+    text-decoration: none;
+    color: #4d4d4d; }
+  .about .button {
+    display: block;
+    margin: 1rem auto;
+    padding: 1rem;
+    width: max-content;
+    background-color: #e6e6e6;
+    color: #1a1a1a;
+    text-decoration: none; }
 
 .services {
   grid-area: services;
+  padding: 1rem 1.5rem;
   text-align: center; }
 
 .testimonials {
-  grid-area: testimonials; }
+  grid-area: testimonials;
+  padding: 1rem 1.5rem; }
 
 .contact-form {
-  grid-area: contact-form; }
+  grid-area: contact-form;
+  padding: 1rem 1.5rem; }
   .contact-form form {
     text-align: center; }
     .contact-form form input, .contact-form form label, .contact-form form textarea {
@@ -581,21 +605,55 @@ nav ul {
       font-family: "Roboto Mono", "Consolas", monospace; }
 
 .gallery {
-  grid-area: gallery; }
+  grid-area: gallery;
+  padding: 1rem 1.5rem; }
 
 .footer {
-  grid-area: footer; }
+  grid-area: footer;
+  padding: 1rem 1.5rem; }
+
+.nav-menu-list {
+  position: absolute;
+  top: 0;
+  right: 25%;
+  left: 0;
+  margin: 0;
+  padding: 1rem;
+  height: 100vh;
+  background-color: rgba(255, 255, 255, 0.95);
+  box-shadow: 0 0px 5px #b3b3b3;
+  grid-template-rows: max-content 1fr max-content;
+  grid-template-areas: "nav-menu-title" "nav-menu-ul" "nav-menu-cta"; }
+  .nav-menu-list .nav-menu-title {
+    grid-area: nav-menu-title; }
+  .nav-menu-list .nav-menu-ul {
+    grid-area: nav-menu-ul;
+    display: grid;
+    grid-auto-rows: 1fr;
+    justify-content: stretch;
+    align-items: center;
+    font-size: 1.5em; }
+    .nav-menu-list .nav-menu-ul li {
+      height: 100%; }
+    .nav-menu-list .nav-menu-ul a {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      height: 100%;
+      text-align: center; }
+  .nav-menu-list .nav-menu-cta {
+    grid-area: nav-menu-cta; }
+    .nav-menu-list .nav-menu-cta a {
+      display: block;
+      font-size: 1.5em;
+      padding: 1rem; }
 
 .menu-toggle-input:checked + .menu-toggle-label > .open-menu {
   display: none; }
 
 .menu-toggle-input:checked ~ .nav-menu-list {
-  display: block;
-  position: fixed;
-  top: 0;
-  left: 0;
-  background-color: white;
-  margin-top: 5rem; }
+  display: grid; }
 
 .menu-toggle-input:not(:checked) + .menu-toggle-label > .close-menu {
   display: none; }

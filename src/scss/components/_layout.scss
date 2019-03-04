@@ -1,6 +1,5 @@
 .wrapper {
   margin: auto;
-  max-width: 1080px;
   display: grid;
   grid-template-columns: 1fr;
   grid-column-gap: 1rem;
@@ -35,7 +34,6 @@
     margin: auto;
     padding: 0 1rem;
     width: 100%;
-    max-width: 1080px;
     height: 5rem;
     position: fixed;
     left: 0;
@@ -43,10 +41,16 @@
     display: grid;
     grid-template-columns: 30% 1fr 30%;
     grid-template-areas:
-      "nav branding nav-menu";
+      ". branding nav-menu";
     text-align: center;
     background-color: #fff;
     box-shadow: 0 0px 5px $color-gray-300;
+    a {
+      color: $color-gray-700;
+      text-decoration: none;
+      font-family: "luckiest guy";
+      font-size: 1.2em;
+    }
   }
 
   .branding {
@@ -58,11 +62,14 @@
     font-size: .7em;
   }
 
-  .nav {
-    grid-area: nav;
+  .nav-list {
+    grid-area: nav-list;
     display: none;
     justify-content: space-around;
     align-items: center;
+  }
+  .nav-cta {
+    display: none;
   }
   .nav-menu {
     grid-area: nav-menu;
@@ -80,13 +87,21 @@
   @media screen and (min-width: $breakpoint-sm) {
     &.navbar {
       grid-template-areas: 
-        "nav branding nav-menu";
+        "nav-cta branding nav-list";
     }
-    .nav {
+    .nav-list {
       display: flex;
     }
     .branding {
       font-size: 1em;
+    }
+    .nav-cta {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .nav-menu {
+      display: none;
     }
   }
 }
@@ -113,7 +128,12 @@
     background-image: linear-gradient(to right, rgba(15, 15, 15, .5), rgba(15, 15, 15, 0));
 
     a.cta {
-      color: white;
+      display: inline-block;
+      max-width: max-content;
+      padding: 1rem;
+      border-radius: 100rem;
+      background-color: white;
+      color: $color-gray-900;
       font-size: 2em;
     }
   }
@@ -135,6 +155,7 @@
   &.benefits {
     grid-area: benefits;
     display: grid;
+    padding: 1rem 1.5rem;
     grid-template-areas: 
       "benefits__title"
       "benefits__care"
@@ -142,6 +163,7 @@
       "benefits__safe";
     grid-gap: 1rem;
     text-align: center;
+    // white-space: nowrap;
   }
 
   &__title {
@@ -172,26 +194,52 @@
 
 .about {
   grid-area: about;
+  padding: 1rem 1.5rem;
   text-align: center;
   ul {
+    margin-top: -.5rem;
+    padding: 0;
     text-align: center;
   }
   li {
     list-style-position: inside;
   }
+  .phone {
+    display: block;
+    margin: 1.5rem auto;
+    padding: 1rem;
+    border: 1px solid black;
+    border-radius: 50rem;
+    width: max-content;
+    font-size: 2em;
+    text-decoration: none;
+    color: $color-gray-700;
+  }
+  .button {
+    display: block;
+    margin: 1rem auto;
+    padding: 1rem;
+    width: max-content;
+    background-color: $color-gray-100;
+    color: $color-gray-900;
+    text-decoration: none;
+  }
 }
 
 .services {
   grid-area: services;
+  padding: 1rem 1.5rem;
   text-align: center;
 }
 
 .testimonials {
   grid-area: testimonials;
+  padding: 1rem 1.5rem;
 }
 
 .contact-form {
   grid-area: contact-form;
+  padding: 1rem 1.5rem;
   form {
     text-align: center;
     & input, label, textarea {
@@ -211,8 +259,10 @@
 
 .gallery {
   grid-area: gallery;
+  padding: 1rem 1.5rem;
 }
 
 .footer {
   grid-area: footer;
+  padding: 1rem 1.5rem;
 }
