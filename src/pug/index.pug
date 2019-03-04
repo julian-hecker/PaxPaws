@@ -9,7 +9,7 @@ html(lang='en')
     title Pax Paws Pet Services
     link(rel='stylesheet', href='./css/main.css')
     link(rel='stylesheet', href='https://fonts.googleapis.com/css?family=Material+Icons|Luckiest+Guy|Roboto|Roboto+Slab|Roboto+Mono')
-    script(src='./js/main.js', defer)
+    //- script(src='./js/main.js', defer)
   body
     .wrapper
       nav.navbar
@@ -18,26 +18,32 @@ html(lang='en')
           label(class="menu-toggle-label" for="menu-toggle")
             i(class="open-menu material-icons md-48") menu
             i(class="close-menu material-icons md-48") close
-          ul.nav-menu-list
-            li
-              a(href='./index.html') Home
-            li
-              a(href='./team.html') The Team
+          .nav-menu-list
+            h2.nav-menu-title -&nbsp;Menu&nbsp;-
+            ul.nav-menu-ul
+              li
+                a(href='./index.html') Home
+              li
+                a.nav-menu-cta(href='./team.html') The Team
+            .nav-menu-cta
+              a(href="tel:+15164187297") 
+                span (516) 418 - PAWS
         .branding
           h1 Pax Paws
-          h3 -Pet Services-
-        ul.nav
+          h3 -&nbsp;Pet Services&nbsp;-
+        ul.nav-list
           li
             a(href='./index.html') Home
           li
             a(href='./team.html') The Team
-        
+        .nav-cta 
+          a(href="tel:+15164187297") (516) 418 - PAWS
       header.header
         .header__text
           h2.header__caption Pet Sitting &amp; Walking <br> around Bellmore and Merrick, NY
-          a.cta(href='tel:15169748454' target="_blank") (516) 418 - PAWS
+          a.cta(href='tel:+15164187297') (516) 418 - PAWS
       section.benefits
-        h2.benefits__title ~ Your Pets, Our Family ~
+        h2.benefits__title ~&nbsp;Your Pets, Our Family&nbsp;~
         .benefits__care.benefit
           h3 Personalized Care
           p We really treat your pets as though they were our own family!
@@ -51,14 +57,14 @@ html(lang='en')
         h2 About Us
         p Pax Paws was founded back in 2017 by <strong>Julian</strong> and <strong>Valeria</strong>, avid pet lovers!
         p We are professionals and animal lovers who will make sure your dogs, cats, and other pets are <strong>safe</strong>, <strong>happy</strong>, and <strong>well-cared for</strong>!
-        p Give us a call or fill out the form to have us help for
+        p Give us a call or fill out the form to have us help for:
           ul 
             li your next overtime shift,
             li a family reunion,
             li a nice vacation,
             li or any other time you're busy!
         a.phone(href='tel:+15164187297') (516) 418 - PAWS
-        a.button(href='team.html', target='_blank',) More About Us!
+        a.button(href='team.html', target='_blank') More About Us!
       section.services
         h2 Services
         h3 Walks &amp; Runs
