@@ -13,7 +13,7 @@
     "contact-form"
     "gallery"
     "footer";
-
+  background: url('../asset/grass.jpg');
   @media screen and (min-width: $breakpoint-sm) {
     grid-template-columns: 50px 1fr 1fr 50px;
     grid-template-areas:
@@ -168,6 +168,7 @@
 
   &__title {
     grid-area: benefits__title;
+    font-style: italic;
   }
 
   &__care {
@@ -235,6 +236,7 @@
 .testimonials {
   grid-area: testimonials;
   padding: 1rem 1.5rem;
+  font-size: .80em;
 }
 
 .contact-form {
@@ -253,6 +255,9 @@
       margin-top: .25rem;
       margin-bottom: .75rem;
       font-family: $fontFamily-monospace;
+    }
+    textarea {
+      resize: none;
     }
   }
 }

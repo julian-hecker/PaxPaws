@@ -422,7 +422,8 @@ nav ul {
   display: grid;
   grid-template-columns: 1fr;
   grid-column-gap: 1rem;
-  grid-template-areas: "navbar" "header" "benefits" "about" "testimonials" "services" "contact-form" "gallery" "footer"; }
+  grid-template-areas: "navbar" "header" "benefits" "about" "testimonials" "services" "contact-form" "gallery" "footer";
+  background: url("../asset/grass.jpg"); }
   @media screen and (min-width: 600px) {
     .wrapper {
       grid-template-columns: 50px 1fr 1fr 50px;
@@ -534,7 +535,8 @@ nav ul {
   text-align: center; }
 
 .benefits__title {
-  grid-area: benefits__title; }
+  grid-area: benefits__title;
+  font-style: italic; }
 
 .benefits__care {
   grid-area: benefits__care; }
@@ -586,7 +588,8 @@ nav ul {
 
 .testimonials {
   grid-area: testimonials;
-  padding: 1rem 1.5rem; }
+  padding: 1rem 1.5rem;
+  font-size: .80em; }
 
 .contact-form {
   grid-area: contact-form;
@@ -603,6 +606,8 @@ nav ul {
       margin-top: .25rem;
       margin-bottom: .75rem;
       font-family: "Roboto Mono", "Consolas", monospace; }
+    .contact-form form textarea {
+      resize: none; }
 
 .gallery {
   grid-area: gallery;
