@@ -6,19 +6,20 @@
   Footer, contact
 
   Refactor EVERYTHING with proper design systems
-html(lang='en')
+html(lang="en")
   head
-    meta(charset='UTF-8')
-    meta(name='viewport', content='width=device-width, initial-scale=1.0')
-    meta(http-equiv='X-UA-Compatible', content='ie=edge')
-    meta(name='description', content='Loving Care for your Pets! Around Bellmore & Merrick, NY. (516) 418 - PAWS')
-    meta(name='keywords', content='Dog Walker, Bellmore, Merrick, Nassau, Dog, Pet, Sitting')
+    meta(charset="UTF-8")
+    meta(name="viewport" content="width=device-width, initial-scale=1.0")
+    meta(http-equiv="X-UA-Compatible", content="ie=edge")
+    meta(name="description", content="Loving Care for your Pets! Around Bellmore & Merrick, NY. (516) 418 - PAWS")
+    meta(name="keywords", content="Dog Walker, Bellmore, Merrick, Nassau, Dog, Pet, Sitting")
     title Pax Paws Pet Services
-    link(rel='stylesheet', href='./css/main.css')
-    link(rel='stylesheet', href='https://fonts.googleapis.com/css?family=Material+Icons|Luckiest+Guy|Roboto|Roboto+Slab|Roboto+Mono')
-    //- script(src='./js/main.js', defer)
+    link(rel="stylesheet", href="./css/main.css")
+    link(rel="stylesheet", href="./css/vendors/heck-animations.css")
+    link(rel="stylesheet", href="https://fonts.googleapis.com/css?family=Material+Icons|Luckiest+Guy|Roboto|Roboto+Slab|Roboto+Mono")
+    //- script(src="./js/main.js", defer)
   body
-    .wrapper
+    .wrapper.ha-animate.ha-slide-right
       nav.navbar
         .nav-menu
           input(class="menu-toggle-input" id="menu-toggle" type="checkbox")
@@ -29,9 +30,9 @@ html(lang='en')
             h2.nav-menu-title -&nbsp;Menu&nbsp;-
             ul.nav-menu-ul
               li
-                a(href='./index.html') Home
+                a(href="./index.html") Home
               li
-                a.nav-menu-cta(href='./team.html') The Team
+                a.nav-menu-cta(href="./team.html") The Team
             .nav-menu-cta
               a(href="tel:+15164187297") 
                 span (516) 418 - PAWS
@@ -40,15 +41,15 @@ html(lang='en')
           h3 -&nbsp;Pet Services&nbsp;-
         ul.nav-list
           li
-            a(href='./index.html') Home
+            a(href="./index.html") Home
           li
-            a(href='./team.html') The Team
+            a(href="./team.html") The Team
         .nav-cta 
           a(href="tel:+15164187297") (516) 418 - PAWS
       header.header
         .header__text
           h2.header__caption Pet Sitting &amp; Walking <br> around Bellmore and Merrick, NY
-          a.cta(href='tel:+15164187297') (516) 418 - PAWS
+          a.cta(href="tel:+15164187297") (516) 418 - PAWS
       section.benefits
         h2.benefits__title ~&nbsp;Your Pets, Our Family&nbsp;~
         .benefits__care.benefit
@@ -70,8 +71,8 @@ html(lang='en')
             li a family reunion,
             li a nice vacation,
             li or any other time you're busy!
-        a.phone(href='tel:+15164187297') (516) 418 - PAWS
-        a.button(href='team.html', target='_blank') More About Us!
+        a.phone(href="tel:+15164187297") (516) 418 - PAWS
+        a.button(href="team.html", target="_blank") More About Us!
       section.services
         h2 Services
         h3 Walks &amp; Runs
@@ -92,21 +93,21 @@ html(lang='en')
               p Julian answered my first call enthusiastically, flexible to my requests. He surpassed my expectations with kindness, intelligence, and wherewithal. Julian and Valeria are compassionate, genuine, and a perfect fit to my needs. Very reasonable prices for exceptional services! Will have me employing them in the future.
               cite --Jasmine from Massapequa
       section.contact-form
-        form(data-netlify='true')
+        form(data-netlify="true")
           h2 Talk to us!
-          label(for='name') What's your name?
-          input(type='text', name='name', required)
+          label(for="name") What's your name?
+          input(type="text", name="name", required)
 
-          label(for='phone') What's your phone?
-          input(type='text', name='phone', required)
+          label(for="phone") What's your phone?
+          input(type="text", name="phone", required)
 
-          label(for='location') Where are you located?
-          input(type='text', name='location', required)
+          label(for="location") Where are you located?
+          input(type="text", name="location", required)
 
-          label(for='service') What do you need?
-          textarea(name='service', cols='30', rows='10')
+          label(for="service") What do you need?
+          textarea(name="service")
 
-          input(type='submit', value='Submit')
+          input(type="submit", value="Submit")
       section.gallery
       footer.footer
 
