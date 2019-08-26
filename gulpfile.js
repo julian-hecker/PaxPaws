@@ -6,6 +6,7 @@ const gulp = require('gulp');
 const gulpConcat = require('gulp-concat');
 const gulpImagemin = require('gulp-imagemin');
 const gulpPostcss = require('gulp-postcss');
+const gulpRename = require('gulp-rename');
 const gulpSass = require('gulp-sass');
 const gulpHtmlmin = require('gulp-htmlmin');
 const gulpUglify = require('gulp-uglify');
@@ -71,6 +72,18 @@ function scss() {
     .pipe(gulp.dest(paths.scss.dest))
 }
 
+function scssAndCss() {
+  return gulp.src(paths.scss.src)
+    .pipe(gulpSass())
+    .pipe(gulpPostcss([autoprefixer( {remove: false} )]))
+    .pipe(gulp.dest(paths.css.dest))
+    .pipe(gulpRename(function(path) {
+      path.extname = '.min.css';
+    }))
+    .pipe(gulpPostcss([cssnano()]))
+    .pipe(gulp.dest(paths.css.dest));
+}
+
 function watch() {
   gulp.watch(paths.asset.src, asset);
   gulp.watch(paths.html.src, html);
@@ -86,7 +99,8 @@ exports.html = html;
 exports.css = css;
 exports.js = js;
 exports.scss = scss;
+exports.scssAndCss = scssAndCss;
 exports.watch = watch;
 
-exports.build = gulp.series(clean, scss, html, css, js, asset);
-exports.default = gulp.series(clean, scss, html, css, js, asset, watch);
+exports.build = gulp.series(clean, scssAndCss, html, js, asset);
+exports.default = gulp.series(clean, scssAndCss, html, js, asset, watch);
