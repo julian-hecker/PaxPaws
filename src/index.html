@@ -1,61 +1,129 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Pax Paws | Home</title>
-  <!-- <link rel="stylesheet" href="./css/main.css"> -->
-
+  <link rel="stylesheet" href="../dist/css/index.min.css" />
 
   <style>
 
+
+
 .section {
-  
   position: relative;
   overflow: hidden;
-
+  padding: 2rem 0;
 }
 
 .section__content {
-
+  position: relative;
 }
 
+.section__background {
+  position: absolute;
+  top: 0; right: 0; bottom: 0; left: 0;
+  background-position: center;
+  background-size: cover;
+}
 
   </style>
 </head>
 <body>
-  
   <div class="wrapper">
-
-    <header class="header">
-
+    <!-- <header class="header">
+      <div class="branding">
+        <img src="#" alt="logo"/>
+        <h1>Pax Paws</h1>
+      </div>
       <nav class="navbar">
-
+        <ul>
+          <li><a href="./index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="./services.html">Services</a></li>
+          <li><a href="faq.html">FAQ</a></li>
+        </ul>
 
       </nav>
-    </header>
+    </header> -->
 
     <main class="main">
-      <section class="section">
-        <div class="section__content">
-          <h2 style="font-size: 3em;">THE BIG HEADLINE GOES RIGHT IN HERE</h2>
-          <a style="font-size: 2em;">Big call to action</a>
-          <p>Tagline</p>
+      <section class="section section--home-cover">
+        <div class="section__background" style="background-color: red;"></div>
+        <div class="section__content container">
+          <p>Pet Services in South Nassau, NY</p>
+          <h2 style="font-size: 3em;">The Care your Pets Deserve</h2>
+          <p style="font-size: 2em; color: blue;">Call us! <a href="tel:+15164187297">(516) 418 - PAWS</a></p>
+          <p>We'd be super excited to talk to you and meet your pets!</p>
         </div>
       </section>
 
-      <section class="section">
+      <section class="section section--home-about">
+        <div class="section__background" style="background-color: orchid;"></div>
+        <div class="section__content container">
+          <h2>Who are we?</h2>
+          <div class="row">
+            <div class="col-6">
+              <img src="#" alt="Julian & Valeria">
+            </div>
+            <div class="col-6">
+              <p>Julian and Valeria are pet experts, working in the field since early 2017. </p>
+              <p><a href="./about.html">Learn more about us! -></a></p>
+            </div>
+          </div>
+        </div>
+      </section>
+      
+      <section class="section section--home-services">
+        <div class="section__background" style="background-color: orange;"></div>
+        <div class="section__content container">
+          <h2>What do we do?</h2>
+          <div class="row">
+            <div class="offset-1 col-5">
+              1 card
+            </div>
+            <div class="col-5">
+              2 card
+            </div>
+          </div>
+        </div>
+      </section>
 
-
+      <section class="section section--home-testimonials">
+        <div class="section__background" style="background-color: yellow"></div>
+        <div class="section__content container">
+          <h2>Our Happy Clients</h2>
+          <div class="row">
+            <div class="col-4">
+              1 card
+            </div>
+            <div class="col-4">
+              2 card
+            </div>
+            <div class="col-4">
+              3 card
+            </div>
+          </div>
+          <p>Check out some more of our testimonials!</p>
+        </div>
+      </section>
+      <section class="section section--home-meet">
+        <div class="section__background" style="background-color: palegoldenrod"></div>
+        <div class="section__content container">
+          <h2>Meet with us for free!</h2>
+          <p>Give us a call at <a href="tel:+15164187297">(516) 418 - PAWS</a></p>
+        </div>
       </section>
     </main>
 
-    <footer class="footer">
+    <footer class="footer section section--footer">
+      <div class="section__background"></div>
+      <div class="section__content container">
+        Greetings, my dear hoomans
+      </div>
 
     </footer>
-
-  </div> <!-- wrapper -->
-
+  </div>
+  <!-- wrapper -->
 </body>
 </html>
-

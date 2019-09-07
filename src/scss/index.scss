@@ -1,0 +1,54 @@
+/**
+ * Pax Paws Stylesheet
+ * 
+ * 
+ * 
+ * By Julian Hecker
+ */
+
+
+// === Abstracts === //
+@import 'abstracts/variables';
+@import 'abstracts/functions';
+@import 'abstracts/mixins';
+@import 'abstracts/overrides';
+
+
+// === Libraries === //
+@import 'libraries/bootstrap/scss/bootstrap-reboot.scss';
+@import 'libraries/bootstrap/scss/bootstrap-grid.scss';
+
+
+// === Base === //
+
+div + * {
+  margin-bottom: .5rem;
+}
+
+// typography
+
+
+
+
+// === Objects / Layouts === //
+// @import 'objects/card';
+.card {
+
+}
+
+
+
+// === Components === //
+
+
+// === Pages === //
+// @import './pages/home';
+.section--home-cover {
+
+}
+
+.section--home-about {
+
+}
+
+
