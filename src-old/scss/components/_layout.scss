@@ -13,7 +13,6 @@
     "contact-form"
     "gallery"
     "footer";
-  background: url('../asset/grass.jpg');
   @media screen and (min-width: $breakpoint-sm) {
     grid-template-columns: 50px 1fr 1fr 50px;
     grid-template-areas:
@@ -109,16 +108,14 @@
 
 
 .header {
-  &.header {
-    grid-area: header;
-    margin-top: 5rem;
-    height: 50vw;
-    max-height: calc(100vh - 5rem);
-    overflow: hidden;
-    background: url('../asset/pups.jpg') no-repeat center;
-    background-size: cover;
-    font-size: .7em;
-  }
+  grid-area: header;
+  margin-top: 5rem;
+  height: 50vw;
+  max-height: calc(100vh - 5rem);
+  overflow: hidden;
+  // background: url('../asset/pups.jpg') no-repeat center;
+  background-size: cover;
+  font-size: .7em;
   & &__text {
     height: 100%;
     display: flex;

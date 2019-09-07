@@ -1,3 +1,10 @@
+/**
+ * Pax Paws Petcare Stylesheet
+ * 
+ * 
+ * 
+ * By Julian Hecker
+ */
 /* normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
 /* Document
    ========================================================================== */
@@ -430,8 +437,7 @@ nav ul {
   display: grid;
   grid-template-columns: 1fr;
   grid-column-gap: 1rem;
-  grid-template-areas: "navbar" "header" "benefits" "about" "testimonials" "services" "contact-form" "gallery" "footer";
-  background: url("../asset/grass.jpg"); }
+  grid-template-areas: "navbar" "header" "benefits" "about" "testimonials" "services" "contact-form" "gallery" "footer"; }
   @media screen and (min-width: 600px) {
     .wrapper {
       grid-template-columns: 50px 1fr 1fr 50px;
@@ -499,40 +505,36 @@ nav ul {
   .navbar .nav-menu {
     display: none; } }
 
-.header.header {
+.header {
   grid-area: header;
   margin-top: 5rem;
   height: 50vw;
   max-height: calc(100vh - 5rem);
   overflow: hidden;
-  background: url("../asset/pups.jpg") no-repeat center;
   background-size: cover;
   font-size: .7em; }
-
-.header .header__text {
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  padding-left: 1rem;
-  justify-content: space-around;
-  background-image: linear-gradient(to right, rgba(15, 15, 15, 0.5), rgba(15, 15, 15, 0)); }
-  .header .header__text a.cta {
-    display: inline-block;
-    max-width: max-content;
-    padding: 1rem;
-    border-radius: 100rem;
-    background-color: white;
-    color: #1a1a1a;
-    font-size: 2em; }
-
-.header .header__caption {
-  font-family: 'Roboto Slab';
-  color: white;
-  text-shadow: 0 0 2px #333; }
-
-@media screen and (min-width: 600px) {
-  .header.header {
-    font-size: 1.25em; } }
+  .header .header__text {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    padding-left: 1rem;
+    justify-content: space-around;
+    background-image: linear-gradient(to right, rgba(15, 15, 15, 0.5), rgba(15, 15, 15, 0)); }
+    .header .header__text a.cta {
+      display: inline-block;
+      max-width: max-content;
+      padding: 1rem;
+      border-radius: 100rem;
+      background-color: white;
+      color: #1a1a1a;
+      font-size: 2em; }
+  .header .header__caption {
+    font-family: 'Roboto Slab';
+    color: white;
+    text-shadow: 0 0 2px #333; }
+  @media screen and (min-width: 600px) {
+    .header.header {
+      font-size: 1.25em; } }
 
 .benefits.benefits {
   grid-area: benefits;
