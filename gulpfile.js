@@ -29,7 +29,7 @@ const paths = {
     dest: 'dist/js/'
   },
   scss: {
-    src: 'src/scss/**/*.+(scss|sass)',
+    src: 'src/scss/*.+(scss|sass)',
     dest: 'src/css/'
   },
   watch: 'dist/**/*.*'
@@ -72,7 +72,7 @@ function scss() {
     .pipe(gulp.dest(paths.scss.dest))
 }
 
-function scssAndCss() {
+function compileCss() {
   return gulp.src(paths.scss.src)
     .pipe(gulpSass())
     .pipe(gulpPostcss([autoprefixer( {remove: false} )]))
@@ -89,7 +89,7 @@ function watch() {
   gulp.watch(paths.html.src, html);
   gulp.watch(paths.css.src, css);
   gulp.watch(paths.js.src, js);
-  gulp.watch(paths.scss.src, scss);
+  gulp.watch(paths.scss.src, compileCss);
 }
 
 
@@ -99,8 +99,8 @@ exports.html = html;
 exports.css = css;
 exports.js = js;
 exports.scss = scss;
-exports.scssAndCss = scssAndCss;
+exports.compileCss = compileCss;
 exports.watch = watch;
 
-exports.build = gulp.series(clean, scssAndCss, html, js, asset);
-exports.default = gulp.series(clean, scssAndCss, html, js, asset, watch);
+exports.build = gulp.series(clean, compileCss, html, js, asset);
+exports.default = gulp.series(clean, compileCss, html, js, asset, watch);
