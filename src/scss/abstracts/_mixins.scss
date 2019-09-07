@@ -1,0 +1,66 @@
+// === Mixins === //
+
+// Clearfix
+// Fixes floated items
+// Stolen from zellwk
+@mixin cf {
+  &::after {
+    display: table;
+    clear: both;
+    content: ' ';
+  }
+}
+
+// Font Smoothing 
+// Turns on font smoothing, especially for light text on dark background for OSX
+// Stolen from zellwk 
+@mixin font-smoothing($value: on) {
+  @if $value == on {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  } @else {
+    -webkit-font-smoothing: subpixel-antialiased;
+    -moz-osx-font-smoothing: auto;
+  }
+}
+
+// Is-invisible
+// Makes element invisible, but accessible
+@mixin is-invisible {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+}
+
+@mixin hover-grow($amount: 1.15, $duration: 200ms) {
+  & {
+    z-index: 0;
+    opacity: 1;
+    transition: $duration all ease-in-out;
+  }
+  &:hover,
+  &:focus,
+  &:active {
+    z-index: 1;
+    opacity: .9;
+    transform: scale($amount);
+  }
+}
+
+@mixin hover-darken-color($color, $amount: 10%) {
+  & {
+    border-color: $color;
+    color: $color;
+  }
+  &:hover,
+  &:focus,
+  &:active {
+    border-color: darken($color, $amount);
+    color: darken($color, $amount);
+  }
+}
