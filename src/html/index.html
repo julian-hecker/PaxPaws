@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Pax Paws | Home</title>
-  <link rel="stylesheet" href="../dist/css/index.min.css" />
+  <link rel="stylesheet" href="./css/index.css" />
   <link href="https://fonts.googleapis.com/css?family=Changa+One&display=swap" rel="stylesheet">
 
   <style>
@@ -32,12 +32,15 @@
     </header> -->
 
     <main class="main">
-      <section class="section section--home-cover">
-        <div class="section__background" style="background-color: red;"></div>
-        <div class="section__content container">
+      <section class="section section--cover section--dark">
+        <video class="section__background section__background--video" autoplay muted loop poster="./asset/petvid.jpg" playsinline webkit-playsinline style="background-color: #333; filter:blur(1px);">
+          <source src="./asset/petvid.mp4"/>
+          <source src="./asset/petvid.mov"/>
+        </video>
+        <div class="section__content container" style="text-align: right;">
           <p>Pet Services in South Nassau, NY</p>
-          <h2 style="font-size: 3em;">The Care your Pets Deserve</h2>
-          <p style="font-size: 2em; color: blue;">Call us! <a href="tel:+15164187297">(516) 418 - PAWS</a></p>
+          <h2>The Care your Pets Deserve</h2>
+          <p>Call us! <a href="tel:+15164187297">(516) 418 - PAWS</a></p>
           <p>We'd be super excited to talk to you and meet your pets!</p>
         </div>
       </section>
