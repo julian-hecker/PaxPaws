@@ -1,7 +1,7 @@
-/**
+/*!
  * Pax Paws Stylesheet
  * 
- * 
+ * Copyright 2017-2019 Pax Paws
  * 
  * By Julian Hecker
  */
@@ -1443,8 +1443,11 @@ html {
   .d-print-inline-flex {
     display: inline-flex !important; } }
 
-h1, h2, h3, h4, h5, h6, a {
-  font-family: "Changa One", sans-serif; }
+body, p {
+  font-family: sans-serif; }
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Changa One", display, sans-serif; }
 
 a {
   color: inherit; }
@@ -1475,17 +1478,163 @@ a {
   .section--dark {
     background-color: #333;
     color: #eee; }
+    .section--dark .section__background + .section__content {
+      -webkit-filter: drop-shadow(0.1rem 0.2rem 0.25rem #333);
+              filter: drop-shadow(0.1rem 0.2rem 0.25rem #333); }
   .section--light {
     background-color: white;
     color: black; }
 
-.card {
-  position: relative;
-  overflow: hidden;
-  min-width: 0; }
-  .card__background {
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0; }
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 10;
+  padding: 0 2rem;
+  height: 5rem;
+  background-color: #eee;
+  background: linear-gradient(to right, #e1e1e1, #fbfbfb);
+  border-bottom: 0.2rem solid #89c17c;
+  color: #89c17c; }
+  .navbar * {
+    margin: 0; }
+  .navbar a {
+    color: inherit;
+    text-decoration: none; }
+  .navbar__branding {
+    display: flex;
+    align-items: center;
+    width: -webkit-max-content;
+    width: -moz-max-content;
+    width: max-content;
+    height: 100%; }
+    .navbar__branding-logo {
+      width: 5rem;
+      height: 5rem;
+      border-radius: 100rem; }
+    .navbar__branding-text {
+      display: flex;
+      flex-direction: column;
+      padding-left: 1rem; }
+    .navbar__branding-name {
+      font-size: 1.5rem; }
+    .navbar__branding-tagline {
+      display: block; }
+  .navbar__button {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+    min-width: 2rem;
+    width: 2rem;
+    min-height: 2rem;
+    height: 2rem;
+    cursor: pointer; }
+    .navbar__button {
+      z-index: 0;
+      opacity: 1;
+      transition: 200ms all ease-in-out; }
+    .navbar__button:hover, .navbar__button:focus, .navbar__button:active {
+      z-index: 1;
+      opacity: .9;
+      -webkit-transform: scale(1.15);
+              transform: scale(1.15); }
+    .navbar__button-line {
+      display: block;
+      width: 100%;
+      height: .25rem;
+      background-color: #89c17c;
+      border-radius: 100rem;
+      transition: 300ms opacity, 300ms -webkit-transform;
+      transition: 300ms transform, 300ms opacity;
+      transition: 300ms transform, 300ms opacity, 300ms -webkit-transform; }
+    .navbar__button--active >
+.navbar__button-line:nth-child(1) {
+      -webkit-transform: translateY(0.88rem) rotate(45deg);
+              transform: translateY(0.88rem) rotate(45deg); }
+    .navbar__button--active > .navbar__button-line:nth-child(2) {
+      opacity: 0; }
+    .navbar__button--active > .navbar__button-line:nth-child(3) {
+      -webkit-transform: translateY(-0.88rem) rotate(-45deg);
+              transform: translateY(-0.88rem) rotate(-45deg); }
+  .navbar__nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    position: static;
+    padding: 0;
+    min-width: 50%;
+    height: 100%;
+    border: none;
+    text-align: center; }
+  .navbar__links {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    position: static;
+    font-size: 1.2rem; }
+    .navbar__links-item {
+      display: block;
+      position: relative;
+      min-width: auto;
+      padding: .5rem; }
+      .navbar__links-item {
+        z-index: 0;
+        opacity: 1;
+        transition: 200ms all ease-in-out; }
+      .navbar__links-item:hover, .navbar__links-item:focus, .navbar__links-item:active {
+        z-index: 1;
+        opacity: .9;
+        -webkit-transform: scale(1.15);
+                transform: scale(1.15); }
+      .navbar__links-item {
+        border-color: #89c17c;
+        color: #89c17c; }
+      .navbar__links-item:hover, .navbar__links-item:focus, .navbar__links-item:active {
+        border-color: #6ab159;
+        color: #6ab159; }
+  @media (max-width: 900px) {
+    .navbar__button {
+      display: flex; }
+    .navbar__nav {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: flex-end;
+      position: absolute;
+      top: 100%;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      padding: 2rem;
+      height: 90vh;
+      height: calc(100vh - 4.8rem);
+      background: inherit;
+      opacity: 0;
+      pointer-events: none;
+      text-align: right; }
+      .navbar__nav--active {
+        opacity: 1;
+        pointer-events: all;
+        transition: 300ms opacity; }
+    .navbar__links {
+      flex-direction: column;
+      justify-content: space-between;
+      padding-bottom: 5rem;
+      height: 100%; }
+      .navbar__links-item {
+        padding: 0; } }
+
+/** TODO
+ * Card Object
+ * Button Object
+ * Social Component
+ * 
+ * Redo Utilities
+ */

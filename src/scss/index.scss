@@ -1,7 +1,7 @@
-/**
+/*!
  * Pax Paws Stylesheet
  * 
- * 
+ * Copyright 2017-2019 Pax Paws
  * 
  * By Julian Hecker
  */
@@ -23,8 +23,13 @@
 // === Base === //
 
 // typography
-h1, h2, h3, h4, h5, h6, a {
-  font-family: "Changa One", sans-serif;
+body, p {
+  font-family: font(primary);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: font(secondary);
+  //"Changa One", sans-serif;
 }
 
 a {
@@ -34,74 +39,60 @@ a {
 
 
 
-// === Objects / Layouts === //
-// @import 'objects/section';
-.section {
-  position: relative;
-  overflow: hidden;
-  padding: 2rem 0;
-  &__content {
-    position: relative;
-  }
-  
-  &__background {
-    position: absolute;
-    top: 0; right: 0; bottom: 0; left: 0;
-    &--image {
-      background-position: center center;
-      background-size: cover;
-    }
-    &--video {
-      max-width: 100vw;
-      min-width: 100vw;
-      height: 100vh;
-      // Ensures poster is roughly same size as video
-      object-fit: cover;
-    }
-  }
-  &--cover {
-    height: 100vh;
-  }
-  &--dark {
-    background-color: #333;
-    color: #eee;
-  }
-  &--light {
-    background-color: white;
-    color: black;
-  }
-}
+// === Layouts === //
+@import './layouts/section';
+
+
+// @import 'layouts/card';
+// .card {
+//   // display: flex;
+//   // flex-direction: column;
+//   position: relative;
+//   overflow: hidden;
+//   min-width: 0;
+
+//   &__background {
+//     position: absolute;
+//     top: 0; right: 0; bottom: 0; left: 0;
+//   }
+//   &__content {
+
+//   }
+
+//   &--border {
+//     border: .1rem solid inherit;
+//   }
+//   &--round {
+//     border-radius: 1rem;
+//   }
+// }
+
 
 
 
 // === Components === //
-// @import 'components/card';
-.card {
-  // display: flex;
-  // flex-direction: column;
-  position: relative;
-  overflow: hidden;
-  min-width: 0;
+@import './components/navbar';
 
-  &__background {
-    position: absolute;
-    top: 0; right: 0; bottom: 0; left: 0;
-  }
-  &__content {
 
-  }
-}
+
+
+
+
+
+
+
 
 
 // === Pages === //
-// @import './pages/home';
-.section--home-cover {
-
-}
 
 
-.section--home-about {
 
-}
+/** TODO
+ * Card Object
+ * Button Object
+ * Social Component
+ * 
+ * Redo Utilities
+ */
 
 
