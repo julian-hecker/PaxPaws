@@ -32,7 +32,6 @@ const paths = {
     src: 'src/scss/*.+(scss|sass)',
     dest: 'src/css/'
   },
-  watch: 'dist/**/*.*'
 };
 
 function clean() {
@@ -87,18 +86,15 @@ function compileCss() {
 function watch() {
   gulp.watch(paths.asset.src, asset);
   gulp.watch(paths.html.src, html);
-  gulp.watch(paths.css.src, css);
   gulp.watch(paths.js.src, js);
-  gulp.watch(paths.scss.src, compileCss);
+  gulp.watch('src/scss/**/*.+(scss|sass)', compileCss);
 }
 
 
 exports.clean = clean
 exports.asset = asset;
 exports.html = html;
-exports.css = css;
 exports.js = js;
-exports.scss = scss;
 exports.compileCss = compileCss;
 exports.watch = watch;
 
