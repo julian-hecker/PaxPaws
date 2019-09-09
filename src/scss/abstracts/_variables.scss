@@ -25,8 +25,11 @@ $colors: (
 
 // Fonts //
 
-$fonts: (
-  primary: '"Changa One", display, sans-serif',
-  secondary: ''
+$font-family-primary: sans-serif;
+$font-family-secondary: "Changa One", display, sans-serif;
+
+$font-families: (
+  primary: $font-family-primary,
+  secondary: $font-family-secondary
 );
 
