@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Pax Paws | Home</title>
-  <link rel="stylesheet" href="./css/index.css" />
+  <link rel="stylesheet" href="./css/index.min.css" />
   <link href="https://fonts.googleapis.com/css?family=Changa+One&display=swap" rel="stylesheet">
 
   <style>
@@ -15,29 +15,52 @@
 </head>
 <body>
   <div class="wrapper">
-    <!-- <header class="header">
-      <div class="branding">
-        <img src="#" alt="logo"/>
-        <h1>Pax Paws</h1>
-      </div>
-      <nav class="navbar">
-        <ul>
-          <li><a href="./index.html">Home</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="./services.html">Services</a></li>
-          <li><a href="faq.html">FAQ</a></li>
-        </ul>
-
+    <header class="navbar">
+      <a class="navbar__branding" href="./index.html">
+        <img class="navbar__branding-logo" alt="Logos" src="./asset/paxpawslogo.svg" />
+        <div class="navbar__branding-text">
+          <h1 class="navbar__branding-name">Pax Paws</h1>
+          <div class="navbar__branding-tagline">Petcare Services</div>
+        </div>
+      </a> <!-- /.branding -->
+      
+      
+      <div class="navbar__button" id="navbar__button" onclick="
+        document.getElementById('navbar__button')
+          .classList.toggle('navbar__button--active');
+        document.getElementById('navbar__nav')
+          .classList.toggle('navbar__nav--active');
+      ">
+        <span class="navbar__button-line"></span>
+        <span class="navbar__button-line"></span>
+        <span class="navbar__button-line"></span>
+      </div> <!-- /.button -->
+      
+      <nav class="navbar__nav" id="navbar__nav">
+        <ul class="navbar__links">
+          <li class="navbar__links-item">
+            <a class="navbar__links-link" href="./index.html" tabindex="-1">Home</a>
+          </li>
+          <li class="navbar__links-item">
+            <a class="navbar__links-link" href="./about.html" tabindex="-1">About Us</a>
+          </li>
+          <li class="navbar__links-item">
+            <a class="navbar__links-link" href="./services.html" tabindex="-1">Services</a>
+          </li>
+        </ul> <!-- /.links -->
       </nav>
-    </header> -->
+      
+    </header>
+    
 
-    <main class="main">
+    <main class="main text-cen ter">
       <section class="section section--cover section--dark d-flex flex-column justify-content-center">
         <video class="section__background section__background--video" autoplay muted loop poster="./asset/petvid.jpg" playsinline webkit-playsinline>
           <source src="./asset/petvid.mp4"/>
           <source src="./asset/petvid.mov"/>
+          <img src="./asset/petvid.jpg" alt="Pet Sitting in Action!">
         </video>
-        <div class="section__content container text-center text-sm-right" style="filter: drop-shadow(.1rem .25rem .1rem #333);">
+        <div class="section__content container text-center text-sm-right">
           <p style="font-size: 1.5em;">Pet Services in South Nassau, NY</p>
           <h2 style="font-size: 3em;">The Care your Pets Deserve</h2>
           <p style="font-size: 2.5em;">Call us! <a href="tel:+15164187297">(516) 418 - PAWS</a></p>
@@ -67,10 +90,12 @@
           <h2>What do we do?</h2>
           <div class="row">
             <div class="offset-1 col-5">
-              1 card
+              <p>Pet Sitting while you're away so you can make sure your pets are getting the best love and care they can get!</p>
+              <a href="./services.html#sitting">More about sitting -></a>
             </div>
             <div class="col-5">
-              2 card
+              <p>Dog walking and running so your dogs can get all the exercise they need even on your busy schedule!</p>
+              <a href="./services.html#walking">More about walking -></a>
             </div>
           </div>
         </div>
@@ -103,10 +128,12 @@
       </section>
     </main>
 
-    <footer class="footer section section--footer">
+    <footer class="footer section section--footer section--dark">
       <div class="section__background"></div>
       <div class="section__content container">
-        Greetings, my dear hoomans
+        <div class="row">
+          <div class="col">Gwootings</div>
+        </div>
       </div>
 
     </footer>
