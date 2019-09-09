@@ -6,11 +6,10 @@
  * By Julian Hecker
  */
 /*!
- * Bootstrap Reboot v4.3.1 (https://getbootstrap.com/)
+ * Bootstrap Grid v4.3.1 (https://getbootstrap.com/)
  * Copyright 2011-2019 The Bootstrap Authors
  * Copyright 2011-2019 Twitter, Inc.
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
- * Forked from Normalize.css, licensed MIT (https://github.com/necolas/normalize.css/blob/master/LICENSE.md)
  */
 *,
 *::before,
@@ -316,20 +315,6 @@ main {
 
 [hidden] {
   display: none !important; }
-
-/*!
- * Bootstrap Grid v4.3.1 (https://getbootstrap.com/)
- * Copyright 2011-2019 The Bootstrap Authors
- * Copyright 2011-2019 Twitter, Inc.
- * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
- */
-html {
-  box-sizing: border-box; }
-
-*,
-*::before,
-*::after {
-  box-sizing: inherit; }
 
 .container {
   width: 100%;
@@ -1443,7 +1428,7 @@ html {
   .d-print-inline-flex {
     display: inline-flex !important; } }
 
-body, p {
+typography body, p {
   font-family: sans-serif; }
 
 h1, h2, h3, h4, h5, h6 {
@@ -1451,6 +1436,9 @@ h1, h2, h3, h4, h5, h6 {
 
 a {
   color: inherit; }
+
+img {
+  max-width: 100%; }
 
 .section {
   position: relative;
@@ -1631,10 +1619,26 @@ a {
       .navbar__links-item {
         padding: 0; } }
 
+.social {
+  text-align: center; }
+  .social ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-left: auto;
+    padding: 0;
+    list-style: none; }
+  .social li {
+    border-radius: 100rem;
+    background-color: red; }
+
+/* Links are supposed to be button-style? */
 /** TODO
  * Card Object
  * Button Object
  * Social Component
  * 
- * Redo Utilities
+ * 
+ * 
+ * push navbar@<md links to top
  */
