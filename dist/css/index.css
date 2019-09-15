@@ -1428,6 +1428,12 @@ main {
   .d-print-inline-flex {
     display: inline-flex !important; } }
 
+html {
+  scroll-behavior: smooth; }
+
+img {
+  max-width: 100%; }
+
 typography body, p {
   font-family: sans-serif; }
 
@@ -1436,9 +1442,6 @@ h1, h2, h3, h4, h5, h6 {
 
 a {
   color: inherit; }
-
-img {
-  max-width: 100%; }
 
 .section {
   position: relative;
@@ -1625,19 +1628,24 @@ img {
     display: flex;
     flex-direction: row;
     justify-content: center;
-    margin-left: auto;
+    margin: 0;
     padding: 0;
     list-style: none; }
   .social li {
+    overflow: hidden;
+    margin-right: .5em;
     border-radius: 100rem;
-    background-color: red; }
+    border: 1px solid white; }
+  .social a {
+    display: inline-block;
+    width: 2em;
+    height: 2em; }
 
-/* Links are supposed to be button-style? */
 /** TODO
  * Card Object
  * Button Object
  * Social Component
- * 
+ * integrate some kind of font icons
  * 
  * 
  * push navbar@<md links to top
