@@ -5,9 +5,49 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Pax Paws | About Us</title>
   <link rel="stylesheet" href="">
+  <link rel="stylesheet" href="./css/index.min.css" />
   <link href="https://fonts.googleapis.com/css?family=Changa+One&display=swap" rel="stylesheet">
 </head>
 <body>
-  
+  <div class="wrapper">
+    
+    <header class="navbar">
+      <a class="navbar__branding" href="./index.html#">
+        <img class="navbar__branding-logo" alt="Logos" src="./asset/paxpawslogo.svg" />
+        <div class="navbar__branding-text">
+          <h1 class="navbar__branding-name">Pax Paws</h1>
+          <div class="navbar__branding-tagline">Petcare Services</div>
+        </div>
+      </a> <!-- /.branding -->
+      
+      <div class="navbar__button" id="navbar__button" onclick="
+        document.getElementById('navbar__button')
+          .classList.toggle('navbar__button--active');
+        document.getElementById('navbar__nav')
+          .classList.toggle('navbar__nav--active');
+      ">
+        <span class="navbar__button-line"></span>
+        <span class="navbar__button-line"></span>
+        <span class="navbar__button-line"></span>
+      </div> <!-- /.button -->
+      
+      <nav class="navbar__nav" id="navbar__nav">
+        <ul class="navbar__links">
+          <li class="navbar__links-item">
+            <a class="navbar__links-link" href="./index.html#" tabindex="-1">Home</a>
+          </li>
+          <li class="navbar__links-item">
+            <a class="navbar__links-link" href="./about.html#" tabindex="-1">About Us</a>
+          </li>
+          <li class="navbar__links-item">
+            <a class="navbar__links-link" href="./services.html#" tabindex="-1">Services</a>
+          </li>
+        </ul> <!-- /.links -->
+      </nav>
+      
+    </header>
+
+
+  </div>
 </body>
 </html>
