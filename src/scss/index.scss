@@ -15,98 +15,41 @@
 
 // === Libraries === //
 @import 'abstracts/library-overrides';
-
+// @import 'libraries/fontawesome/scss/fontawesome';
+// @import 'libraries/fontawesome/scss/brands.scss';
 
 
 
 
 // === Base === //
-@import './bases/base';
-@import './bases/typography';
+@import 'bases/base';
+@import 'bases/typography';
 
 
 // === Layouts === //
-@import './layouts/section';
+@import 'layouts/section';
 
 
 
 
 // === Components === //
-@import './components/navbar';
+@import 'components/button';
+@import 'components/card';
+@import 'components/navbar';
+@import 'components/social';
 
-
-.social {
-  text-align: center;
-  // font-size: 2em;
-  ul {
-    // @supports not (display: grid) {
-      display: flex;
-      flex-direction: row;
-      justify-content: center;
-      // }
-    // @supports (display: grid) {
-      //   display: grid;
-      //   grid-gap: .5rem;
-      //   grid-auto-flow: column;
-      //   grid-auto-columns: 2rem;
-      //   grid-template-rows: 2rem;
-      //   justify-content: center;
-      // }
-      margin: 0;
-      padding: 0;
-      list-style: none;
-    }
-  li {
-    overflow: hidden;
-    margin-right: .5em;
-    border-radius: 100rem;
-    
-    border: 1px solid white;
-  }
-  a {
-    display: inline-block;
-    width: 2em;
-    height: 2em;
-  }
-}
-
-
-// @import 'components/card';
-// .card {
-//   // display: flex;
-//   // flex-direction: column;
-//   position: relative;
-//   overflow: hidden;
-//   min-width: 0;
-
-//   &__background {
-//     position: absolute;
-//     top: 0; right: 0; bottom: 0; left: 0;
-//   }
-//   &__content {
-
-//   }
-
-//   &--border {
-//     border: .1rem solid inherit;
-//   }
-//   &--round {
-//     border-radius: 1rem;
-//   }
-// }
 
 
 
 
 
 /** TODO
- * Card Object
- * Button Object
+ * Card Object | with no-border, no-shadow classes
+ * Button Object | copy from bootstrap
  * Social Component
- * integrate some kind of font icons
+   * integrate some kind of font icons
  * 
  * 
- * push navbar@<md links to top
  */
 
 
