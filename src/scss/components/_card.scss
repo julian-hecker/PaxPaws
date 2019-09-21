@@ -1,3 +1,50 @@
+// ul.card-group > li.card * 3
+
+
+// === Card === //
+.card {
+  // display: flex;
+  // flex-direction: column;
+  position: relative;
+  overflow: hidden;
+  min-width: 0;
+  
+  box-shadow: 0 .5rem .75rem .12rem #333;
+
+  &__background {
+    position: absolute;
+    top: 0; right: 0; bottom: 0; left: 0;
+  }
+  &__content {
+    // display: flex;
+    // flex-direction: column;
+    // justify-content: space-between;
+    padding: 1.5rem;
+  }
+  &--no-shadow {
+    box-shadow: none;
+  }
+  &--border {
+    border: .1rem solid inherit;
+  }
+  &--round {
+    border-radius: 1rem;
+  }
+  &--interactive {
+    cursor: pointer;
+    @include hover-grow;
+  }
+}
+
+.card-group {
+  display: flex;
+  flex-direction: row;
+}
+
+
+
+
+
 // .card {
 //   position: relative;
 //   display: flex;
