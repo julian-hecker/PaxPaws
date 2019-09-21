@@ -1,6 +1,10 @@
-// === Base === // 
+// === Base === //
 html {
   scroll-behavior: smooth;
+}
+
+h1, h2, h3, h4, h5, h6, p, .button, address {
+  margin-bottom: 1rem;
 }
 
 img {
