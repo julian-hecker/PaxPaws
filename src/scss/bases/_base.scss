@@ -1,7 +1,26 @@
 // === Base === //
+*, *::before, *::after {
+  box-sizing: inherit;
+}
+
 html {
+  box-sizing: border-box;
   scroll-behavior: smooth;
 }
+
+body {
+  margin: 0;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  @include hfa {
+    color: inherit;
+    text-decoration: none;
+  }
+}
+
 
 h1, h2, h3, h4, h5, h6, p, .button, address {
   margin-bottom: 1rem;
