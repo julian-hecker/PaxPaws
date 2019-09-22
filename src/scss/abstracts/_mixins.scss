@@ -37,15 +37,25 @@
   clip: rect(0 0 0 0);
 }
 
-@mixin hover-grow($amount: 1.15, $duration: 200ms) {
+// HFA
+// Allows quick creation of :hover, :focus, :active blocks
+@mixin hfa {
+  &:hover,
+  &:focus,
+  &:active {
+    @content;
+  }
+}
+
+// Hover-grow
+// Scales an element on hover, focus, or active
+@mixin hover-grow($amount: 1.10, $duration: 250ms) {
   & {
     z-index: 0;
     opacity: 1;
     transition: $duration all ease-in-out;
   }
-  &:hover,
-  &:focus,
-  &:active {
+  @include hfa {
     z-index: 1;
     opacity: .9;
     transform: scale($amount);
@@ -57,9 +67,7 @@
     border-color: $color;
     color: $color;
   }
-  &:hover,
-  &:focus,
-  &:active {
+  @include hfa {
     border-color: darken($color, $amount);
     color: darken($color, $amount);
   }
