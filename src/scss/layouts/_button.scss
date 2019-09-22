@@ -1,20 +1,41 @@
 // === Button === //
 .button {
   display: inline-block;
+  position: relative;
   padding: .5rem 1rem;
+  width: max-content;
 
   border: .1rem solid black;
   border-color: currentColor;
-  border-radius: 100rem;
+  border-radius: .25rem;
+  cursor: pointer;
+  font-size: 1em;
   text-align: center;
-
-  &--no-round {
-    border-radius: 0;
+  text-decoration: none;
+  vertical-align: middle;
+  white-space: nowrap;
+  @include hover-grow(1.1, 250ms);
+  
+  &--no-border {
+    border: none;
   }
-  @include hover-grow;
+  &--round {
+    border-radius: 100rem;
+  }
+  &--outline {
+    background-color: transparent;
+    border-color: currentColor;
+    color: currentColor;
+  }
+  &--disabled {
+    opacity: .65;
+    pointer-events: none;
+  }
 }
 
+.button-group {
 
+}
 
 // // =-= Button =-= //
 // .btn {
@@ -36,14 +57,7 @@
 //   white-space: nowrap;
 //   @include hover-grow;
 
-//   &--disabled {
-//     opacity: .65;
-//     pointer-events: none;
-//   }
 
-//   &--round {
-//     border-radius: 100rem;
-//   }
 //   @each $color, $value in $colors {
 //     &-#{$color} {
 //       background-color: $value;
