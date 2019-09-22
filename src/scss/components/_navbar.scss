@@ -130,14 +130,20 @@ $navbar-color: color(secondary);
         pointer-events: all;
         transition: 300ms opacity;
       }
+      &:focus-within {
+        opacity: 1;
+        pointer-events: all;
+        transition: 300ms opacity;
+      }
     }
     &__links {
       flex-direction: column;
-      justify-content: space-between;
-      padding-bottom: 5rem;
+      justify-content: flex-start;
+      align-items: flex-end;
+      padding-bottom: 5rem; // Prevents links from getting hidden by ios browser bar.
       height: 100%;
       &-item {
-        padding: 0;
+        padding: 1rem 0;
       }
     }
   }
