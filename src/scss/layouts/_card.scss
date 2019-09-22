@@ -1,0 +1,51 @@
+// === Card === //
+.card {
+  position: relative;
+  overflow: hidden;
+  min-width: 0;
+  
+  // box-shadow: 0 .5rem .75rem .12rem rgba(0, 0, 0, .25);
+
+  &__background {
+    position: absolute;
+    top: 0; right: 0; bottom: 0; left: 0;
+    background-size: cover;
+  }
+  &__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+    padding: 1.5rem;
+  }
+  &--shadow {
+    box-shadow: 0 .5rem .75rem .12rem rgba(0, 0, 0, .25);
+  }
+  &--border {
+    border: .1rem solid currentColor;
+  }
+  &--round {
+    border-radius: 1rem;
+  }
+  &--interactive {
+    cursor: pointer;
+    @include hover-grow;
+  }
+  &--dark {
+    background-color: #333;
+    color: #eee;
+    text-shadow: 0 0 .50rem #333;  
+  }
+  &--light {
+    background-color: #eee;
+    color: #333;
+  }
+}
+
+.card-group {
+  display: grid;
+  grid-gap: 1rem;
+  grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr));
+}
+
+// ul.card-group > .card*3 > .card__content
