@@ -1,5 +1,17 @@
 // === Library Overrides === //
 
+// === FontAwesome === //
+$fa-font-path:         "../asset/webfonts";
+
+
+// === Bootstrap === //
+
+// For grid items that wrap rows
+[class*="col"] {
+  margin-bottom: 1rem;
+}
+
+
 // For Bootstrap Grid
 // $grid-breakpoints: (
 //   xs: 0,
@@ -15,13 +27,6 @@
 //   lg: 850px,
 //   xl: 1100px
 // ) !default;
-
-/*!
- * Bootstrap Grid v4.3.1 (https://getbootstrap.com/)
- * Copyright 2011-2019 The Bootstrap Authors
- * Copyright 2011-2019 Twitter, Inc.
- * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
- */
 
 
 @import "../libraries/bootstrap/scss/functions";
@@ -72,5 +77,37 @@ $utilities: map-get-multiple(
     "text-align",
   )
 );
+
+
+
+// $utilities: map-get-multiple(
+//   $utilities,
+//   (
+//     "align",
+//     "float",
+//     "overflow",
+//     "display",
+//     "shadow",
+//     "position",
+//     "border",
+//     "border-top",
+//     "border-right",
+//     "border-bottom",
+//     "border-left",
+//     "border-color",
+//     "width",
+//     "max-width",
+//     "min-viewport-width",
+//     "height",
+//     "max-height",
+//     "viewport-height",
+//     "min-viewport-height",
+//     "flex",
+//     "flex-grow",
+//     "flex-shrink",
+//     "flex-wrap",
+//     "justify-content", "align-items", "align-content", "align-self", "order", "margin", "margin-x", "margin-y", "margin-top", "margin-right", "margin-bottom", "margin-left", "negative-margin", "negative-margin-x", "negative-margin-y", "negative-margin-top", "negative-margin-right", "negative-margin-bottom", "negative-margin-left", "padding", "padding-x", "padding-y", "padding-top", "padding-right", "padding-bottom", "padding-left", "font-weight", "text-transform", "text-align", "color", "line-height", "background-color", "white-space", "text-decoration", "font-style", "overflow-wrap", "font-family", "rounded", "rounded-top", "rounded-right", "rounded-bottom", "rounded-left", "visibility",
+//   )
+// );
 
 @import "../libraries/bootstrap/scss/utilities/api";
