@@ -16,7 +16,7 @@
 // === Libraries === //
 @import 'abstracts/library-overrides';
 // @import 'libraries/fontawesome/scss/fontawesome';
-// @import 'libraries/fontawesome/scss/brands.scss';
+@import 'libraries/fontawesome/scss/brands.scss';
 
 
 
@@ -28,28 +28,30 @@
 
 // === Layouts === //
 @import 'layouts/section';
+@import 'layouts/button';
+@import 'layouts/card';
 
 
 
 
 // === Components === //
-@import 'components/button';
-@import 'components/card';
 @import 'components/navbar';
 @import 'components/social';
 
 
+// === Pages === //
+.home {
 
+}
 
 
 
 /** TODO
- * Card Object | with no-border, no-shadow classes
- * Button Object | copy from bootstrap
- * Social Component
-   * integrate some kind of font icons
- * 
- * 
+ * Fix FontAwesome
+ * Fix row gap (reimplement with CSS Grid12?)
+ * Section: Background in one half, content in other half :nth(n), alternating
+ * Button Colors, CTA
+ * Design: Form, Services, Team, footer
  */
 
 

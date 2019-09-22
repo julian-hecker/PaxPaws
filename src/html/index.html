@@ -32,13 +32,13 @@
       <nav class="navbar__nav" id="navbar__nav">
         <ul class="navbar__links">
           <li class="navbar__links-item">
-            <a class="navbar__links-link" href="index.html#" tabindex="-1">Home</a>
+            <a class="navbar__links-link" href="index.html#">Home</a>
           </li>
           <li class="navbar__links-item">
-            <a class="navbar__links-link" href="about.html#" tabindex="-1">About Us</a>
+            <a class="navbar__links-link" href="about.html#">About Us</a>
           </li>
           <li class="navbar__links-item">
-            <a class="navbar__links-link" href="services.html#" tabindex="-1">Services</a>
+            <a class="navbar__links-link" href="services.html#">Services</a>
           </li>
         </ul> <!-- /.links -->
       </nav>
@@ -46,7 +46,7 @@
     </header>
     
 
-    <main class="main">
+    <main class="home main">
       <section id="cover" class="section section--cover section--dark d-flex flex-column justify-content-center text-center text-md-right">
         <video class="section__background section__background--video" autoplay muted loop poster="./asset/petvid.jpg" playsinline webkit-playsinline>
           <source src="./asset/petvid.mp4"/>
@@ -56,7 +56,7 @@
         <div class="section__content container">
           <p style="font-size: 1.5em;">Pet Services in South Nassau, NY</p>
           <h2 style="font-size: 3em;">The Care your Pets Deserve</h2>
-          <p style="font-size: 2.5em;">Call us! <a class="button" href="tel:+15164187297">(516) 418 - PAWS</a></p>
+          <p style="font-size: 2.5em;">Call us! <a class="button button--no-border" href="tel:+15164187297">(516) 418 - PAWS</a></p>
           <p style="font-size: 1.5em;">We'd be super excited to talk to you and meet your pets!</p>
         </div>
       </section>
@@ -82,14 +82,19 @@
         <div class="section__content container">
           <h2 class="text-center">What do we do?</h2>
           <div class="row">
-            <div class="col-6 col-md-5 offset-md-1 card card__content">
-              <p>Pet Sitting while you're away so you can make sure your pets are getting the best love and care they can get!</p>
-              <a class="button" href="services.html#sitting">More about sitting -></a>
+            <div class="col-md-5 offset-md-1 ">
+              <div class="card card--shadow card__content">
+                <p class="">Pet Sitting while you're away so you can make sure your pets are getting the best love and care they can get!</p>
+                <a class="button" href="services.html#sitting">More about sitting -></a>
+              </div>
             </div>
-            <div class="col-6 col-md-5 card card__content">
-              <p>Dog walking and running so your dogs can get all the exercise they need even on your busy schedule!</p>
-              <a class="button" href="services.html#walking">More about walking -></a>
+            <div class="col-md-5">
+              <div class="card card--shadow card__content">
+                <p>Dog walking and running so your dogs can get all the exercise they need even on your busy schedule!</p>
+                <a class="button button--round button--disabled" href="services.html#walking">More about walking -></a>
+              </div>
             </div>
+
           </div>
         </div>
       </section>
@@ -99,23 +104,36 @@
         <div class="section__content container">
           <h2 class="text-center">Our Happy Clients</h2>
           <div class="row">
-            <div class="col-sm-4">
-              <blockquote>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam, quaerat?</p>
-                <cite>Human, from Location</cite>
-              </blockquote>
+            <div class=" col-6 col-sm-4">
+              <div class="card card--shadow">
+                <div class="card__content">
+                  <blockquote>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam, quaerat?</p>
+                    <cite>Human, from Location</cite>
+                  </blockquote>
+                </div>
+              </div>
             </div>
-            <div class="col-sm-4">
-              <blockquote>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam, quaerat?</p>
-                <cite>Human, from Location</cite>
-              </blockquote>
+            <div class="col-6 col-sm-4">
+              <div class="card card--dark card--shadow">
+                <div class="card__content">
+                  <blockquote>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam, quaerat?</p>
+                    <cite>Human, from Location</cite>
+                  </blockquote>
+                </div>
+              </div>
             </div>
-            <div class="col-sm-4">
-              <blockquote>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam, quaerat?</p>
-                <cite>Human, from Location</cite>
-              </blockquote>
+            <div class="col-12 col-sm-4">
+              <div class="card card--dark card--shadow card--interactive card--round">
+                <div class="card__background" style="background-image: url(asset/petvid.jpg);"></div>
+                <div class="card__content">
+                  <blockquote>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam, quaerat?</p>
+                    <cite>Human, from Location</cite>
+                  </blockquote>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -137,7 +155,7 @@
         </div>
         <div class="social">
           <ul>
-            <li><a class="button" href="#" target="_blank">A</a></li>
+            <li><a class="button" href="#" target="_blank"><i class="fab fa-amazon"></i></a></li>
             <li><a class="button" href="#" target="_blank">B</a></li>
             <li><a class="button" href="#" target="_blank">C</a></li>
           </ul>
