@@ -1,0 +1,32 @@
+// =-= ITCSS =-= //
+// 0 - Vendors
+// 1 - Abstracts
+//        variables
+//        mixins
+// 2 - Bases
+//        root
+//        reset
+//        elements
+// 3 - Layouts??
+// 4 - Components
+
+/**
+ * Pax Paws Petcare Stylesheet
+ * 
+ * 
+ * 
+ * By Julian Hecker
+ */
+
+@import './vendors/normalize';
+@import './vendors/material';
+
+@import './abstracts/variable';
+// @import './abstracts/mixins';
+
+@import './bases/root';
+@import './bases/element';
+
+@import './components/layout';
+@import './components/nav-menu';
+

@@ -1,0 +1,97 @@
+// === Button === //
+.button {
+  display: inline-block;
+  position: relative;
+  padding: .5rem 1rem;
+  width: max-content;
+
+  background-color: transparent;
+  border: .1rem solid;
+  border-color: currentColor;
+  border-radius: .25rem;
+  color: inherit;
+  cursor: pointer;
+  font-size: 1em;
+  text-align: center;
+  text-decoration: none;
+  vertical-align: middle;
+  white-space: nowrap;
+  @include hover-grow(1.1, 250ms);
+  
+  &--no-border {
+    border: none;
+  }
+  &--round {
+    border-radius: 100rem;
+  }
+  &--outline {
+    background-color: transparent;
+    border-color: currentColor;
+    color: currentColor;
+  }
+  &--disabled {
+    opacity: .65;
+    pointer-events: none;
+  }
+}
+
+.button-group {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+
+  .button {
+    // flex-grow: 1;
+    border-radius: 0;
+  }
+  .button:first-of-type {
+    border-top-left-radius: 100rem;
+    border-bottom-left-radius: 100rem;
+  }
+  .button:last-of-type {
+    border-top-right-radius: 100rem;
+    border-bottom-right-radius: 100rem;
+  }
+}
+
+/* TODO
+ * Create colored buttons
+ * Create sized buttons
+ * Create CTA Special button
+ */
+
+
+
+
+
+
+//   @each $color, $value in $colors {
+//     &-#{$color} {
+//       background-color: $value;
+//       border-color: darken($value, 10%);
+//       color: white;
+//       &:hover,
+//       &:focus,
+//       &:active {
+//         background-color: darken($value, 10%);
+//         border-color: darken($value, 20%);
+//       }
+//     }
+//   }
+
+//   @each $color, $value in $colors {
+//     &-outline-#{$color} {
+//       background-color: transparent;
+//       border-color: $value;
+//       color: $value;
+//       &:hover,
+//       &:focus,
+//       &:active {
+//         border-color: darken($value, 10%);
+//         color: darken($value, 10%);
+//       }
+//     }
+//   }
+
+// Button Sizes
+

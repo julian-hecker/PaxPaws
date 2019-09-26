@@ -1,0 +1,113 @@
+// === Library Overrides === //
+
+// === FontAwesome === //
+$fa-font-path:         "../asset/webfonts";
+
+
+// === Bootstrap === //
+
+// For grid items that wrap rows
+[class*="col"] {
+  margin-bottom: 1rem;
+}
+
+
+// For Bootstrap Grid
+// $grid-breakpoints: (
+//   xs: 0,
+//   sm: 300px,
+//   md: 600px,
+//   lg: 900px,
+//   xl: 1200px
+// ) !default;
+
+// $container-max-widths: (
+//   sm: 275px,
+//   md: 550px,
+//   lg: 850px,
+//   xl: 1100px
+// ) !default;
+
+
+@import "../libraries/bootstrap/scss/functions";
+@import "../libraries/bootstrap/scss/variables";
+@import "../libraries/bootstrap/scss/mixins";
+
+@import "../libraries/bootstrap/scss/reboot";
+@import "../libraries/bootstrap/scss/grid";
+@import "../libraries/bootstrap/scss/utilities";
+
+// Only use the utilities we need
+// stylelint-disable-next-line scss/dollar-variable-default
+$utilities: map-get-multiple(
+  $utilities,
+  (
+    "display",
+    "order",
+    "flex",
+    "flex-direction",
+    "flex-grow",
+    "flex-shrink"
+    "flex-wrap",
+    "justify-content",
+    "align-items",
+    "align-content",
+    "align-self",
+    // "margin",
+    // "margin-x",
+    // "margin-y",
+    // "margin-top",
+    // "margin-right",
+    // "margin-bottom",
+    // "margin-left",
+    // "negative-margin",
+    // "negative-margin-x",
+    // "negative-margin-y",
+    // "negative-margin-top",
+    // "negative-margin-right",
+    // "negative-margin-bottom",
+    // "negative-margin-left",
+    // "padding",
+    // "padding-x",
+    // "padding-y",
+    // "padding-top",
+    // "padding-right",
+    // "padding-bottom",
+    // "padding-left",
+    "text-align",
+  )
+);
+
+
+
+// $utilities: map-get-multiple(
+//   $utilities,
+//   (
+//     "align",
+//     "float",
+//     "overflow",
+//     "display",
+//     "shadow",
+//     "position",
+//     "border",
+//     "border-top",
+//     "border-right",
+//     "border-bottom",
+//     "border-left",
+//     "border-color",
+//     "width",
+//     "max-width",
+//     "min-viewport-width",
+//     "height",
+//     "max-height",
+//     "viewport-height",
+//     "min-viewport-height",
+//     "flex",
+//     "flex-grow",
+//     "flex-shrink",
+//     "flex-wrap",
+//     "justify-content", "align-items", "align-content", "align-self", "order", "margin", "margin-x", "margin-y", "margin-top", "margin-right", "margin-bottom", "margin-left", "negative-margin", "negative-margin-x", "negative-margin-y", "negative-margin-top", "negative-margin-right", "negative-margin-bottom", "negative-margin-left", "padding", "padding-x", "padding-y", "padding-top", "padding-right", "padding-bottom", "padding-left", "font-weight", "text-transform", "text-align", "color", "line-height", "background-color", "white-space", "text-decoration", "font-style", "overflow-wrap", "font-family", "rounded", "rounded-top", "rounded-right", "rounded-bottom", "rounded-left", "visibility",
+//   )
+// );
+
+@import "../libraries/bootstrap/scss/utilities/api";

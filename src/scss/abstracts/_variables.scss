@@ -1,0 +1,35 @@
+// === Variables === //
+
+// Breakpoints //
+
+$breakpoints: (
+  '': 0px,
+  'xs': 300px,
+  'sm': 600px,
+  'md': 900px,
+  'lg': 1200px,
+  'xl': 1600px,
+);
+
+
+// Colors //
+
+$colors: (
+  primary: #4b5dc2,
+  secondary: #89c17c,
+  tertiary: #386c6d,
+
+  light: #eee,
+  dark: #333
+);
+
+// Fonts //
+
+$font-family-primary: sans-serif;
+$font-family-secondary: "Changa One", display, sans-serif;
+
+$font-families: (
+  primary: $font-family-primary,
+  secondary: $font-family-secondary
+);
+

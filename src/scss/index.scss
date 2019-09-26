@@ -1,0 +1,57 @@
+/*!
+ * Pax Paws Stylesheet
+ * 
+ * Copyright 2017-2019 Pax Paws
+ * 
+ * By Julian Hecker
+ */
+
+
+// === Abstracts === //
+@import 'abstracts/variables';
+@import 'abstracts/functions';
+@import 'abstracts/mixins';
+
+
+// === Libraries === //
+@import 'abstracts/library-overrides';
+// @import 'libraries/fontawesome/scss/fontawesome';
+@import 'libraries/fontawesome/scss/brands.scss';
+
+
+
+
+// === Base === //
+@import 'bases/base';
+@import 'bases/typography';
+
+
+// === Layouts === //
+@import 'layouts/section';
+@import 'layouts/button';
+@import 'layouts/card';
+
+
+
+
+// === Components === //
+@import 'components/navbar';
+@import 'components/social';
+
+
+// === Pages === //
+.home {
+
+}
+
+
+
+/** TODO
+ * Fix FontAwesome
+ * Fix row gap (reimplement with CSS Grid12?)
+ * Section: Background in one half, content in other half :nth(n), alternating
+ * Button Colors, CTA
+ * Design: Form, Services, Team, footer
+ */
+
+

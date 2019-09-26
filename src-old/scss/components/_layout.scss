@@ -1,0 +1,270 @@
+.wrapper {
+  margin: auto;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-column-gap: 1rem;
+  grid-template-areas: 
+    "navbar"
+    "header"
+    "benefits"
+    "about"
+    "testimonials"
+    "services"
+    "contact-form"
+    "gallery"
+    "footer";
+  @media screen and (min-width: $breakpoint-sm) {
+    grid-template-columns: 50px 1fr 1fr 50px;
+    grid-template-areas:
+      "navbar navbar navbar navbar"
+      "header header header header"
+      ". benefits benefits ."
+      ". about gallery ."
+      ". testimonials testimonials ."
+      ". contact-form services ."
+      "footer footer footer footer";
+  }
+
+}
+
+.navbar {
+  &.navbar {
+    grid-area: navbar;
+    margin: auto;
+    padding: 0 1rem;
+    width: 100%;
+    height: 5rem;
+    position: fixed;
+    left: 0;
+    right: 0;
+    display: grid;
+    grid-template-columns: 30% 1fr 30%;
+    grid-template-areas:
+      ". branding nav-menu";
+    text-align: center;
+    background-color: #fff;
+    box-shadow: 0 0px 5px $color-gray-300;
+    a {
+      color: $color-gray-700;
+      text-decoration: none;
+      font-family: "luckiest guy";
+      font-size: 1.2em;
+    }
+  }
+
+  .branding {
+    grid-area: branding;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: .7em;
+  }
+
+  .nav-list {
+    grid-area: nav-list;
+    display: none;
+    justify-content: space-around;
+    align-items: center;
+  }
+  .nav-cta {
+    display: none;
+  }
+  .nav-menu {
+    grid-area: nav-menu;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    input[type=checkbox] {
+      display: none;
+    }
+    .nav-menu-list {
+      display: none;
+    }
+  }
+
+  @media screen and (min-width: $breakpoint-sm) {
+    &.navbar {
+      grid-template-areas: 
+        "nav-cta branding nav-list";
+    }
+    .nav-list {
+      display: flex;
+    }
+    .branding {
+      font-size: 1em;
+    }
+    .nav-cta {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .nav-menu {
+      display: none;
+    }
+  }
+}
+
+
+
+.header {
+  grid-area: header;
+  margin-top: 5rem;
+  height: 50vw;
+  max-height: calc(100vh - 5rem);
+  overflow: hidden;
+  // background: url('../asset/pups.jpg') no-repeat center;
+  background-size: cover;
+  font-size: .7em;
+  & &__text {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    padding-left: 1rem;
+    justify-content: space-around;
+    background-image: linear-gradient(to right, rgba(15, 15, 15, .5), rgba(15, 15, 15, 0));
+
+    a.cta {
+      display: inline-block;
+      max-width: max-content;
+      padding: 1rem;
+      border-radius: 100rem;
+      background-color: white;
+      color: $color-gray-900;
+      font-size: 2em;
+    }
+  }
+  & &__caption {
+    font-family: 'Roboto Slab';
+    color: white;
+    text-shadow: 0 0 2px #333;
+    
+  }
+  @media screen and (min-width: $breakpoint-sm) {
+    
+    &.header {
+      font-size: 1.25em;
+    }
+  }
+}
+
+.benefits {
+  &.benefits {
+    grid-area: benefits;
+    display: grid;
+    padding: 1rem 1.5rem;
+    grid-template-areas: 
+      "benefits__title"
+      "benefits__care"
+      "benefits__health"
+      "benefits__safe";
+    grid-gap: 1rem;
+    text-align: center;
+    // white-space: nowrap;
+  }
+
+  &__title {
+    grid-area: benefits__title;
+    font-style: italic;
+  }
+
+  &__care {
+    grid-area: benefits__care;
+  }
+
+  &__health {
+    grid-area: benefits__health;
+  }
+
+  &__safe {
+    grid-area: benefits__safe;
+  }
+
+  @media screen and (min-width: $breakpoint-sm) {
+    &.benefits {
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-template-areas: 
+        "benefits__title benefits__title benefits__title"
+        "benefits__care benefits__health benefits__safe"
+    }
+  }
+}
+
+.about {
+  grid-area: about;
+  padding: 1rem 1.5rem;
+  text-align: center;
+  ul {
+    margin-top: -.5rem;
+    padding: 0;
+    text-align: center;
+  }
+  li {
+    list-style-position: inside;
+  }
+  .phone {
+    display: block;
+    margin: 1.5rem auto;
+    padding: 1rem;
+    border: 1px solid black;
+    border-radius: 50rem;
+    width: max-content;
+    font-size: 2em;
+    text-decoration: none;
+    color: $color-gray-700;
+  }
+  .button {
+    display: block;
+    margin: 1rem auto;
+    padding: 1rem;
+    width: max-content;
+    background-color: $color-gray-100;
+    color: $color-gray-900;
+    text-decoration: none;
+  }
+}
+
+.services {
+  grid-area: services;
+  padding: 1rem 1.5rem;
+  text-align: center;
+}
+
+.testimonials {
+  grid-area: testimonials;
+  padding: 1rem 1.5rem;
+  font-size: .80em;
+}
+
+.contact-form {
+  grid-area: contact-form;
+  padding: 1rem 1.5rem;
+  form {
+    text-align: center;
+    & input, label, textarea {
+      width: 180px;
+      margin-right: auto;
+      margin-left: auto;
+      display: block;
+    }
+    & input, textarea {
+      padding: .5rem;
+      margin-top: .25rem;
+      margin-bottom: .75rem;
+      font-family: $fontFamily-monospace;
+    }
+    textarea {
+      resize: none;
+    }
+  }
+}
+
+.gallery {
+  grid-area: gallery;
+  padding: 1rem 1.5rem;
+}
+
+.footer {
+  grid-area: footer;
+  padding: 1rem 1.5rem;
+}
