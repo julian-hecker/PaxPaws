@@ -1,0 +1,33 @@
+/**
+ * Fallback styles for browsers with no JavaScript
+ * 
+ * 
+ */
+
+html/*.no-js*/ {
+  .navbar {
+
+    &__button {
+      display: none !important;
+    }
+    &__nav {
+      display: block;
+      position: static;
+      // width: 100%;
+      flex-grow: 2;
+      height: 100%;
+      background: none;
+      pointer-events: all;
+      opacity: 1;
+    }
+    &__links {
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0;
+      &-link {
+        padding: 0;
+      }
+    }
+  }
+}
