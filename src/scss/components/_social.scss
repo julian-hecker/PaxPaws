@@ -5,6 +5,7 @@
   ul {
       display: flex;
       flex-direction: row;
+      flex-wrap: wrap;
       justify-content: center;
       margin: 0;
       padding: 0;
@@ -16,10 +17,52 @@
     }
   }
   a {
-    display: inline-block;
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: center;
     width: 2em;
     height: 2em;
-    border: 1px solid currentColor;
-    border-radius: 100rem;
+    // border: 1px solid currentColor;
+    // border-radius: 100rem;
+    @include hover-grow(1.25, 300ms);
+  }
+  .label {
+    @include is-invisible;
   }
 }
+
+
+// === Icons | Depend on FontAwesome 5 === //
+
+.facebook {
+  @extend .fab;
+  @extend .fa-facebook-f;
+  @include hfa() {
+    color: #3b5998;
+  }
+}
+
+.instagram {
+  @extend .fab;
+  @extend .fa-instagram;
+  @include hfa() {
+    color: #fcaf45;
+  }
+}
+
+.yelp {
+  @extend .fab;
+  @extend .fa-yelp;
+  @include hfa() {
+    color: #d32323;
+  }
+}
+
+.google {
+  @extend .fab;
+  @extend .fa-google;
+  @include hfa() {
+    color: #0f9d58;
+  }
+}
+

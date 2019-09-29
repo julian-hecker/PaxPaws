@@ -4,14 +4,25 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Pax Paws | Home</title>
-  <link rel="stylesheet" href="./css/index.min.css" />
-  <link href="https://fonts.googleapis.com/css?family=Changa+One&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/index.min.css" />
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-109123380-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'UA-109123380-1');
+  </script>
+  <noscript>
+    <link rel="stylesheet" href="css/no-js.min.css">
+  </noscript>
 </head>
 <body>
   <div class="wrapper">
     <header class="navbar">
       <a class="navbar__branding" href="index.html#">
-        <img class="navbar__branding-logo" alt="Logos" src="asset/paxpawslogo.svg" />
+        <img class="navbar__branding-logo" alt="Logos" src="assets/images/paxpawslogo.svg" />
         <div class="navbar__branding-text">
           <h1 class="navbar__branding-name">Pax Paws</h1>
           <div class="navbar__branding-tagline">Petcare Services</div>
@@ -38,6 +49,9 @@
             <a class="navbar__links-link" href="about.html#">About Us</a>
           </li>
           <li class="navbar__links-item">
+            <a class="navbar__links-link" href="blog.html#">Blog</a>
+          </li>
+          <li class="navbar__links-item">
             <a class="navbar__links-link" href="services.html#">Services</a>
           </li>
         </ul> <!-- /.links -->
@@ -48,15 +62,15 @@
 
     <main class="home main">
       <section id="cover" class="section section--cover section--dark d-flex flex-column justify-content-center text-center text-md-right">
-        <video class="section__background section__background--video" autoplay muted loop poster="./asset/petvid.jpg" playsinline webkit-playsinline>
-          <source src="./asset/petvid.mp4"/>
-          <source src="./asset/petvid.mov"/>
-          <img src="./asset/petvid.jpg" alt="Pet Sitting in Action!">
+        <video class="section__background section__background--video" autoplay muted loop poster="./assets/images/petvid.jpg" playsinline webkit-playsinline>
+          <source src="assets/images/petvid.mp4"/>
+          <source src="assets/images/petvid.mov"/>
+          <img src="assets/images/petvid.jpg" alt="Pet Sitting in Action!">
         </video>
         <div class="section__content container">
           <p style="font-size: 1.5em;">Pet Services in South Nassau, NY</p>
           <h2 style="font-size: 3em;">The Care your Pets Deserve</h2>
-          <p style="font-size: 2.5em;">Call us! <a class="button button--no-border" href="tel:+15164187297">(516) 418 - PAWS</a></p>
+          <p style="font-size: 2.5em;">Call us! <a class="button button--no-border" href="tel:+15164187297"><i class="fas fa-phone fa-flip-horizontal"></i> (516) 418 - PAWS</a></p>
           <p style="font-size: 1.5em;">We'd be super excited to talk to you and meet your pets!</p>
         </div>
       </section>
@@ -67,7 +81,7 @@
           <h2 class="text-center">Who are we?</h2>
           <div class="row">
             <div class="col-6">
-              <img src="asset/petvid.jpg" alt="Julian & Valeria">
+              <img src="assets/images/petvid.jpg" alt="Julian & Valeria">
             </div>
             <div class="col-6">
               <p>Julian and Valeria are pet experts, working in the field since early 2017. </p>
@@ -78,7 +92,6 @@
       </section>
       
       <section id="services" class="section section--home-services">
-        <div class="section__background"></div>
         <div class="section__content container">
           <h2 class="text-center">What do we do?</h2>
           <div class="row">
@@ -100,11 +113,10 @@
       </section>
 
       <section id="testimonials" class="section section--home-testimonials">
-        <div class="section__background"></div>
         <div class="section__content container">
           <h2 class="text-center">Our Happy Clients</h2>
           <div class="row">
-            <div class=" col-6 col-sm-4">
+            <div class="col-sm-6 col-md-4">
               <div class="card card--shadow">
                 <div class="card__content">
                   <blockquote>
@@ -114,23 +126,24 @@
                 </div>
               </div>
             </div>
-            <div class="col-6 col-sm-4">
-              <div class="card card--dark card--shadow">
+            <div class="col-sm-6 col-md-4">
+              <div class="card card--dark card--shadow card--interactive">
+
                 <div class="card__content">
                   <blockquote>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam, quaerat?</p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam, quaerat? Lorem ipsum dolor sit amet consectetur adipisicing elit. Id inventore consectetur similique nulla quis eum molestias! Sequi voluptates aspernatur omnis?</p>
                     <cite>Human, from Location</cite>
                   </blockquote>
                 </div>
               </div>
             </div>
-            <div class="col-12 col-sm-4">
-              <div class="card card--dark card--shadow card--interactive card--round">
-                <div class="card__background" style="background-image: url(asset/petvid.jpg);"></div>
+            <div class="col-12 col-md-4">
+              <div class="card card--dark card--shadow card--interactive">
+                <div class="card__background" style="background-image: url(assets/images/petvid.jpg);"></div>
                 <div class="card__content">
                   <blockquote>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam, quaerat?</p>
-                    <cite>Human, from Location</cite>
+                    <p>Very reasonable prices for exceptional services will have me employing them in the future.</p>
+                    <cite>Jasmine, from Massapequa</cite>
                   </blockquote>
                 </div>
               </div>
@@ -139,7 +152,6 @@
         </div>
       </section>
       <section id="meet" class="section section--home-meet">
-        <div class="section__background"></div>
         <div class="section__content container">
           <h2 class="text-center">Meet with us for free!</h2>
           <p>Give us a call at <a href="tel:+15164187297">(516) 418 - PAWS</a></p>
@@ -148,16 +160,16 @@
     </main>
 
     <footer class="footer section section--footer section--dark">
-      <div class="section__background"></div>
       <div class="section__content container">
         <div class="row">
           <div class="col">Gwootings</div>
         </div>
         <div class="social">
-          <ul>
-            <li><a class="button" href="#" target="_blank"><i class="fab fa-amazon"></i></a></li>
-            <li><a class="button" href="#" target="_blank">B</a></li>
-            <li><a class="button" href="#" target="_blank">C</a></li>
+          <ul class="">
+            <li><a class="facebook" href="https://www.facebook.com/pax.paws.pets/" target="_blank"><span class="label">Facebook</span></a></li>
+            <li><a class="yelp" href="https://www.yelp.com/biz/pax-paws-pet-services-bellmore" target="_blank"><span class="label">Yelp</span></a></li>
+            <li><a class="instagram" href="https://www.instagram.com/pax.paws.petcare/" target="_blank"><span class="label">Instagram</span></a></li>
+            <li><a class="google" href="https://g.page/pax-paws-pet-services?share" target="_blank"><span class="label">Google</span></a></li>
           </ul>
         </div>
       </div>

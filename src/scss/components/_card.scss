@@ -10,6 +10,7 @@
     position: absolute;
     top: 0; right: 0; bottom: 0; left: 0;
     background-size: cover;
+    transition: all 250ms;
   }
   &__content {
     display: flex;
@@ -29,12 +30,18 @@
   }
   &--interactive {
     cursor: pointer;
-    @include hover-grow;
+    // @include hover-grow;
+    @include hfa() {
+      .card__background {
+        transform: scale(1.1);
+        filter: brightness(0.5);
+      }
+    }
   }
   &--dark {
     background-color: #333;
     color: #eee;
-    text-shadow: 0 0 .50rem #333;  
+    text-shadow: 0 0 .25rem #333;
   }
   &--light {
     background-color: #eee;

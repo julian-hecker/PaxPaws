@@ -13,8 +13,8 @@ const gulpUglify = require('gulp-uglify');
 
 const paths = {
   asset: {
-    src: ['src/asset/**/*.*','!src/asset/**/*.xcf'],
-    dest: 'dist/asset/'
+    src: ['src/assets/**/*.*'],
+    dest: 'dist/assets/'
   },
   html: {
     src: 'src/html/*.html',
