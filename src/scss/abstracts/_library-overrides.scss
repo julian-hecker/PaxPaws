@@ -1,7 +1,12 @@
 // === Library Overrides === //
 
 // === FontAwesome === //
-$fa-font-path:         "../asset/webfonts";
+$fa-font-path:         "../assets/webfonts/fontawesome";
+
+@import '../libraries/fontawesome/scss/fontawesome.scss';
+@import '../libraries/fontawesome/scss/brands.scss';
+
+
 
 
 // === Bootstrap === //
