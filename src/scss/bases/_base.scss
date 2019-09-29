@@ -23,9 +23,16 @@ a {
 
 
 h1, h2, h3, h4, h5, h6, p, .button, address {
-  margin-bottom: 1rem;
+  margin-bottom: .5em;
 }
 
 img {
   max-width: 100%;
+}
+
+
+@media (max-width: 320px) {
+  html, body {
+    min-width: 320px;
+  }
 }
