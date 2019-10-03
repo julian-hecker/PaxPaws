@@ -23,6 +23,7 @@ $navbar-color: color(secondary);
   }
   a {
     color: inherit;
+    font-family: 'Changa One';
     text-decoration: none;
   }
 
@@ -33,6 +34,7 @@ $navbar-color: color(secondary);
     height: 100%;
 
     &-logo {
+      padding: .5rem 0;
       width: 5rem; height: 5rem;
       border-radius: 100rem;
     }
