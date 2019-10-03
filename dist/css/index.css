@@ -5867,6 +5867,11 @@ img {
   html, body {
     min-width: 320px; } }
 
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0; }
+
 body, p {
   font-family: sans-serif; }
 
@@ -5937,9 +5942,6 @@ h6 {
   display: inline-block;
   position: relative;
   padding: .5rem 1rem;
-  width: -webkit-max-content;
-  width: -moz-max-content;
-  width: max-content;
   background-color: transparent;
   border: .1rem solid;
   border-color: currentColor;
@@ -5968,7 +5970,7 @@ h6 {
     background-color: transparent;
     border-color: currentColor;
     color: currentColor; }
-  .button--disabled {
+  .button--disabled, .button[disabled] {
     opacity: .65;
     pointer-events: none; }
 
@@ -6027,7 +6029,8 @@ h6 {
     text-shadow: 0 0 .25rem #333; }
   .card--light {
     background-color: #eee;
-    color: #333; }
+    color: #333;
+    text-shadow: 0 0 .25rem #eee; }
 
 .card-group {
   display: grid;
@@ -6054,6 +6057,7 @@ h6 {
     margin: 0; }
   .navbar a {
     color: inherit;
+    font-family: 'Changa One';
     text-decoration: none; }
   .navbar__branding {
     display: flex;
@@ -6063,6 +6067,7 @@ h6 {
     width: max-content;
     height: 100%; }
     .navbar__branding-logo {
+      padding: .5rem 0;
       width: 5rem;
       height: 5rem;
       border-radius: 100rem; }
@@ -6234,6 +6239,39 @@ h6 {
 
 .google:hover, .google:focus, .google:active {
   color: #0f9d58; }
+
+#home #testimonials .section__content {
+  display: grid;
+  -webkit-column-gap: 2rem;
+          column-gap: 2rem;
+  row-gap: 2rem;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-areas: "heading  heading   heading" "card1    card2     card3"; }
+  #home #testimonials .section__content h2 {
+    grid-area: heading; }
+  @media (max-width: 700px) {
+    #home #testimonials .section__content {
+      grid-template-columns: 1fr 1fr;
+      grid-template-areas: "heading  heading" "card1    card2" "card3    card3"; } }
+  @media (max-width: 500px) {
+    #home #testimonials .section__content {
+      grid-template-columns: 1fr;
+      grid-template-areas: "heading" "card1" "card2" "card3"; } }
+
+#home #testimonials .card__content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%; }
+
+#home #testimonials .card:nth-of-type(1) {
+  grid-area: card1; }
+
+#home #testimonials .card:nth-of-type(2) {
+  grid-area: card2; }
+
+#home #testimonials .card:nth-of-type(3) {
+  grid-area: card3; }
 
 /** TODO
  * Button Colors, Sizes, CTA

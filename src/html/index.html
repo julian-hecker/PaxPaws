@@ -60,7 +60,7 @@
     </header>
     
 
-    <main class="home main">
+    <main id="home" class="main">
       <section id="cover" class="section section--cover section--dark d-flex flex-column justify-content-center text-center text-md-right">
         <video class="section__background section__background--video" autoplay muted loop poster="./assets/images/petvid.jpg" playsinline webkit-playsinline>
           <source src="assets/images/petvid.mp4"/>
@@ -75,7 +75,7 @@
         </div>
       </section>
 
-      <section id="about" class="section section--home-about">
+      <section id="about" class="section">
         <div class="section__background"></div>
         <div class="section__content container">
           <h2 class="text-center">Who are we?</h2>
@@ -91,7 +91,7 @@
         </div>
       </section>
       
-      <section id="services" class="section section--home-services">
+      <section id="services" class="section">
         <div class="section__content container">
           <h2 class="text-center">What do we do?</h2>
           <div class="row">
@@ -112,46 +112,37 @@
         </div>
       </section>
 
-      <section id="testimonials" class="section section--home-testimonials">
+      <section id="testimonials" class="section">
         <div class="section__content container">
           <h2 class="text-center">Our Happy Clients</h2>
-          <div class="row">
-            <div class="col-sm-6 col-md-4">
-              <div class="card card--shadow">
-                <div class="card__content">
-                  <blockquote>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam, quaerat?</p>
-                    <cite>Human, from Location</cite>
-                  </blockquote>
-                </div>
-              </div>
+          <div class="card card--shadow">
+            <div class="card__content">
+              <blockquote>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam, quaerat?</p>
+                <cite>Human, from Location</cite>
+              </blockquote>
             </div>
-            <div class="col-sm-6 col-md-4">
-              <div class="card card--dark card--shadow card--interactive">
-
-                <div class="card__content">
-                  <blockquote>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam, quaerat? Lorem ipsum dolor sit amet consectetur adipisicing elit. Id inventore consectetur similique nulla quis eum molestias! Sequi voluptates aspernatur omnis?</p>
-                    <cite>Human, from Location</cite>
-                  </blockquote>
-                </div>
-              </div>
+          </div>
+          <div class="card card--dark card--shadow card--interactive">
+            <div class="card__content">
+              <blockquote>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam, quaerat? Lorem ipsum dolor sit amet consectetur adipisicing elit. Id inventore consectetur similique nulla quis eum molestias! Sequi voluptates aspernatur omnis?</p>
+                <cite>Human, from Location</cite>
+              </blockquote>
             </div>
-            <div class="col-12 col-md-4">
-              <div class="card card--dark card--shadow card--interactive">
-                <div class="card__background" style="background-image: url(assets/images/petvid.jpg);"></div>
-                <div class="card__content">
-                  <blockquote>
-                    <p>Very reasonable prices for exceptional services will have me employing them in the future.</p>
-                    <cite>Jasmine, from Massapequa</cite>
-                  </blockquote>
-                </div>
-              </div>
+          </div>
+          <div class="card card--dark card--shadow card--interactive">
+            <div class="card__background" style="background-image: url(assets/images/petvid.jpg);"></div>
+            <div class="card__content">
+              <blockquote>
+                <p>Very reasonable prices for exceptional services will have me employing them in the future.</p>
+                <cite>Jasmine, from Massapequa</cite>
+              </blockquote>
             </div>
           </div>
         </div>
       </section>
-      <section id="meet" class="section section--home-meet">
+      <section id="meet" class="section">
         <div class="section__content container">
           <h2 class="text-center">Meet with us for free!</h2>
           <p>Give us a call at <a href="tel:+15164187297">(516) 418 - PAWS</a></p>
@@ -159,13 +150,19 @@
       </section>
     </main>
 
-    <footer class="footer section section--footer section--dark">
+    <footer class="footer section section--dark">
       <div class="section__content container">
-        <div class="row">
-          <div class="col">Gwootings</div>
+        <div class="footer-links">
+          <ul>
+            <li>Business Information</li>
+            <li>Phone: <a href="tel:+15164187297">(516) 418 - PAWS</a></li>
+            <li>Email: <a href="mailto:paxpawspets@gmail.com">paxpawspets@gmail.com</a></li>
+            <li>Hours: 8am-8pm</li>
+            <li>Location: South Nassau, NY</li>
+          </ul>
         </div>
         <div class="social">
-          <ul class="">
+          <ul>
             <li><a class="facebook" href="https://www.facebook.com/pax.paws.pets/" target="_blank"><span class="label">Facebook</span></a></li>
             <li><a class="yelp" href="https://www.yelp.com/biz/pax-paws-pet-services-bellmore" target="_blank"><span class="label">Yelp</span></a></li>
             <li><a class="instagram" href="https://www.instagram.com/pax.paws.petcare/" target="_blank"><span class="label">Instagram</span></a></li>
@@ -181,8 +178,6 @@
 </html>
 
 <!-- 
-Feature: "Constant text updates all the time" (little text popup animation)
-
 Time to redesign bottom section, team section, services section
 Newsletter is gonna be important!
 

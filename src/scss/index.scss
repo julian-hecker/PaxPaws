@@ -18,7 +18,6 @@
 
 
 // === Base === //
-
 @import 'bases/reset';
 @import 'bases/base';
 @import 'bases/typography';
@@ -76,7 +75,65 @@
 
 
 // === Pages === //
-.home {
+#home {
+
+  #testimonials {
+    .section__content {
+      display: grid;
+      column-gap: 2rem;
+      row-gap: 2rem;
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-template-areas: 
+        "heading  heading   heading"
+        "card1    card2     card3";
+      h2 {
+        grid-area: heading;
+      }
+      @media (max-width: 700px) {
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas:
+          "heading  heading"
+          "card1    card2"
+          "card3    card3";
+      }
+      @media (max-width: 500px) {
+        grid-template-columns: 1fr;
+        grid-template-areas:
+          "heading"
+          "card1"
+          "card2"
+          "card3";
+      }
+    }
+    .card__content {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      height: 100%;
+    }
+    .card:nth-of-type(1) {
+      grid-area: card1;
+    }
+    .card:nth-of-type(2) {
+      grid-area: card2;
+    }
+    .card:nth-of-type(3) {
+      grid-area: card3;
+    }
+    
+  }
+
+// Smaller screens: Two columns, last card takes up full row
+
+
+
+
+
+
+
+
+
+
 
 }
 
