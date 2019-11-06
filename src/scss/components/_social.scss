@@ -31,38 +31,3 @@
   }
 }
 
-
-// === Icons | Depend on FontAwesome 5 === //
-
-.facebook {
-  @extend .fab;
-  @extend .fa-facebook-f;
-  @include hfa() {
-    color: #3b5998;
-  }
-}
-
-.instagram {
-  @extend .fab;
-  @extend .fa-instagram;
-  @include hfa() {
-    color: #fcaf45;
-  }
-}
-
-.yelp {
-  @extend .fab;
-  @extend .fa-yelp;
-  @include hfa() {
-    color: #d32323;
-  }
-}
-
-.google {
-  @extend .fab;
-  @extend .fa-google;
-  @include hfa() {
-    color: #0f9d58;
-  }
-}
-
