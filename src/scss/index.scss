@@ -39,76 +39,20 @@
 @import 'components/social';
 
 
-// === Pages === //
-#home {
-
-  #testimonials {
-    .section__content {
-      display: grid;
-      column-gap: 2rem;
-      row-gap: 2rem;
-      grid-template-columns: 1fr 1fr 1fr;
-      grid-template-areas: 
-        "heading  heading   heading"
-        "card1    card2     card3";
-      h2 {
-        grid-area: heading;
-      }
-      @media (max-width: 700px) {
-        grid-template-columns: 1fr 1fr;
-        grid-template-areas:
-          "heading  heading"
-          "card1    card2"
-          "card3    card3";
-      }
-      @media (max-width: 500px) {
-        grid-template-columns: 1fr;
-        grid-template-areas:
-          "heading"
-          "card1"
-          "card2"
-          "card3";
-      }
-    }
-    .card__content {
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      height: 100%;
-    }
-    .card:nth-of-type(1) {
-      grid-area: card1;
-    }
-    .card:nth-of-type(2) {
-      grid-area: card2;
-    }
-    .card:nth-of-type(3) {
-      grid-area: card3;
-    }
-    
-  }
-
-// Smaller screens: Two columns, last card takes up full row
-
-
-
-
-
-
-
-
-
-
-
-}
-
+// === Layouts === //
+// Refactor layouts at some future date
+// https://philipwalton.com/articles/css-architecture/
+@import 'layouts/home';
 
 
 /** TODO
  * Button Colors, Sizes, CTA
  * add Animate.css (CREATE A SCSS PORT OF ANIMATE CSS, POST ON SCSS ISSUE)
- * Fix row gap (reimplement with CSS Grid12?)
- * Design: Form, Services, Team, footer
+ * Deal with aftermath of killing bootstrap
+    * Text aligning, cover positioning, text sizing
+    * Reset styles (blockquotes acting up, what else?)
+ * Gridify correctly (put headings, sub in a textbox)
+ * https://github.com/nolimits4web/swiper
  */
 
 
@@ -125,32 +69,32 @@
 // <div class="section__content">Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam et quod ducimus aperiam laudantium voluptatibus. Aspernatur eius praesentium itaque quisquam fuga assumenda voluptatem cum enim laudantium quam. Ad, odit dicta!</div>
 // </section>
 
-.section.test {
-  padding: 2rem;
-  text-align: justify;
-  display: grid;
-  grid-gap: 2rem;
-  @media screen and (max-width: 500px) {
-    grid-template-areas: "both";
-    .section__background {
-      grid-area: "both";
-    }
-    .section__content {
-      grid-area: "both";
-    }
-  }
-  @media screen and (min-width: 500px) {
-    grid-template-columns: 1fr 1fr;
-    grid-template-areas: "background content";
-    .section__background {
-      grid-area: background;
-      height: 100%;
-    }
-    .section__content {
-      grid-area: content;
-    }
-  }
-}
+// .section.test {
+//   padding: 2rem;
+//   text-align: justify;
+//   display: grid;
+//   grid-gap: 2rem;
+//   @media screen and (max-width: 500px) {
+//     grid-template-areas: "both";
+//     .section__background {
+//       grid-area: "both";
+//     }
+//     .section__content {
+//       grid-area: "both";
+//     }
+//   }
+//   @media screen and (min-width: 500px) {
+//     grid-template-columns: 1fr 1fr;
+//     grid-template-areas: "background content";
+//     .section__background {
+//       grid-area: background;
+//       height: 100%;
+//     }
+//     .section__content {
+//       grid-area: content;
+//     }
+//   }
+// }
 
 
 

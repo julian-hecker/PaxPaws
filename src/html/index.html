@@ -78,43 +78,30 @@
       <section id="about" class="section">
         <div class="section__background"></div>
         <div class="section__content container">
-          <h2 class="text-center">Who are we?</h2>
-          <div class="row">
-            <div class="col-6">
+          <h2>Who are we?</h2>
               <img src="assets/images/petvid.jpg" alt="Julian & Valeria">
-            </div>
-            <div class="col-6">
               <p>Julian and Valeria are pet experts, working in the field since early 2017. </p>
               <p><a class="button" href="about.html">Learn more about us! -></a></p>
-            </div>
-          </div>
         </div>
       </section>
       
       <section id="services" class="section">
         <div class="section__content container">
-          <h2 class="text-center">What do we do?</h2>
-          <div class="row">
-            <div class="col-md-5 offset-md-1 ">
-              <div class="card card--shadow card__content">
-                <p class="">Pet Sitting while you're away so you can make sure your pets are getting the best love and care they can get!</p>
-                <a class="button" href="services.html#sitting">More about sitting -></a>
-              </div>
-            </div>
-            <div class="col-md-5">
-              <div class="card card--shadow card__content">
-                <p>Dog walking and running so your dogs can get all the exercise they need even on your busy schedule!</p>
-                <a class="button button--round button--disabled" href="services.html#walking">More about walking -></a>
-              </div>
-            </div>
-
+          <h2>What do we do?</h2>
+          <div class="card card--shadow card__content">
+            <p>Pet Sitting while you're away so you can make sure your pets are getting the best love and care they can get!</p>
+            <a class="button" href="services.html#sitting">More about sitting -></a>
+          </div>
+          <div class="card card--shadow card__content">
+            <p>Dog walking and running so your dogs can get all the exercise they need even on your busy schedule!</p>
+            <a disabled class="button button--round button--disabled" href="services.html#walking" tabindex="-1">More about walking -></a>
           </div>
         </div>
       </section>
 
       <section id="testimonials" class="section">
         <div class="section__content container">
-          <h2 class="text-center">Our Happy Clients</h2>
+          <h2>Our Happy Clients</h2>
           <div class="card card--shadow">
             <div class="card__content">
               <blockquote>
@@ -179,7 +166,7 @@
 
     <footer class="footer section section--dark">
       <div class="section__content container">
-        <div class="footer-links">
+        <nav class="footer-links">
           <ul>
             <li>Business Information</li>
             <li>Phone: <a href="tel:+15164187297">(516) 418 - PAWS</a></li>
@@ -187,15 +174,23 @@
             <li>Hours: 8am-8pm</li>
             <li>Location: South Nassau, NY</li>
           </ul>
-        </div>
-        <div class="social">
+        </nav>
+        <nav>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="services.html">Services</a></li>
+          </ul>
+        </nav>
+        <nav class="social">
           <ul>
             <li><a class="facebook" href="https://www.facebook.com/pax.paws.pets/" target="_blank"><span class="label">Facebook</span></a></li>
             <li><a class="yelp" href="https://www.yelp.com/biz/pax-paws-pet-services-bellmore" target="_blank"><span class="label">Yelp</span></a></li>
             <li><a class="instagram" href="https://www.instagram.com/pax.paws.petcare/" target="_blank"><span class="label">Instagram</span></a></li>
             <li><a class="google" href="https://g.page/pax-paws-pet-services?share" target="_blank"><span class="label">Google</span></a></li>
           </ul>
-        </div>
+        </nav>
       </div>
 
     </footer>
@@ -205,7 +200,6 @@
 </html>
 
 <!-- 
-Time to redesign bottom section, team section, services section
-Newsletter is gonna be important!
+Image slider for "who are we" sections
 
  -->
