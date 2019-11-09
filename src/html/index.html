@@ -142,10 +142,37 @@
           </div>
         </div>
       </section>
-      <section id="meet" class="section">
+      <section id="contact" class="section">
         <div class="section__content container">
-          <h2 class="text-center">Meet with us for free!</h2>
-          <p>Give us a call at <a href="tel:+15164187297">(516) 418 - PAWS</a></p>
+          <div class="text">
+            <h2>Get in Touch with us!</h2>
+            <p>Give us a call at <a href="tel:+15164187297">(516) 418 - PAWS</a> and meet with us for free!</p>
+          </div>
+          <div class="map-outer">
+
+          </div>
+          <div class="form-outer">
+            <form class="form" action="paxpawspets.com" method="GET">
+              <h3 class="form__title">Send us a message</h3>
+              <p class="form__desc">Your data is safe with us!</p>
+              <div class="form__item">
+                <label class="form__label" for="forminput-name">Name</label>
+                <input class="form__input" name="name" id="forminput-name" type="text" required placeholder="Name">
+              </div>
+              <div class="form__item">
+                <label class="form__label" for="forminput-phone">Phone</label>
+                <input class="form__input" name="phone" id="forminput-phone" type="tel" required pattern="^([0-9]{0,3}(-?\d{3})-?)(\d{3})(-?\d{4})$" placeholder="516-123-4567">
+              </div>
+              <div class="form__item">
+                <label class="form__label" for="forminput-message">Message</label>
+                <textarea class="form__input textarea" name="message" id="forminput-message" required placeholder="How can we help you out?"></textarea>
+              </div>
+              <div class="form__item">
+                <label class="form__label" for="forminput-phone">Submit</label>
+                <input class="form__input form__button" name="phone" id="forminput-phone" type="submit">
+              </div>
+            </form>
+          </div>
         </div>
       </section>
     </main>
