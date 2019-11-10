@@ -1,16 +1,16 @@
 // === Social === //
-.social {
+
+/*ul*/.social {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+  list-style: none;
   text-align: center;
   font-size: 1.5rem;
-  ul {
-      display: flex;
-      flex-direction: row;
-      flex-wrap: wrap;
-      justify-content: center;
-      margin: 0;
-      padding: 0;
-      list-style: none;
-    }
+
   li {
     &:not(:last-of-type) {
       margin-right: .5em;

@@ -114,8 +114,7 @@
   font-family: 'Font Awesome 5 Brands'; }
 
 *, *::before, *::after {
-  box-sizing: inherit;
-  vertical-align: middle; }
+  box-sizing: inherit; }
 
 html {
   box-sizing: border-box;
@@ -137,6 +136,9 @@ h1, h2, h3, h4, h5, h6, p, address {
 
 img {
   max-width: 100%; }
+
+blockquote {
+  margin: 0; }
 
 @media (max-width: 320px) {
   html, body {
@@ -428,6 +430,14 @@ h6 {
       .navbar__links-item:hover, .navbar__links-item:focus, .navbar__links-item:active {
         border-color: #6ab159;
         color: #6ab159; }
+      .navbar__links-item--active::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: .25rem;
+        background-color: #89c17c; }
   @media (max-width: 900px) {
     .navbar__button {
       display: flex; }
@@ -464,6 +474,68 @@ h6 {
       height: 100%; }
       .navbar__links-item {
         padding: 1rem 0; } }
+
+.footer {
+  background-color: #333;
+  color: #eee;
+  line-height: 1.5; }
+  .footer__link {
+    display: inline-block;
+    color: #eee;
+    text-decoration: none;
+    -webkit-transform-origin: left;
+            transform-origin: left; }
+    .footer__link {
+      z-index: 0;
+      opacity: 1;
+      transition: 250ms all ease-in-out; }
+    .footer__link:hover, .footer__link:focus, .footer__link:active {
+      z-index: 1;
+      opacity: .9;
+      -webkit-transform: scale(1.1);
+              transform: scale(1.1); }
+    .footer__link:hover, .footer__link:focus, .footer__link:active {
+      color: #89c17c; }
+  .footer__category-title {
+    font-family: "Changa One", display, sans-serif;
+    font-size: 1.25em;
+    text-transform: uppercase; }
+  .footer__category--info {
+    grid-area: info; }
+  .footer__category--links {
+    grid-area: links;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between; }
+    .footer__category--links > * {
+      width: 50%; }
+  .footer__category--social {
+    grid-area: social;
+    text-align: center; }
+    .footer__category--social .footer__link {
+      -webkit-transform-origin: center;
+              transform-origin: center; }
+  .footer__category--copyright {
+    grid-area: copy;
+    text-align: center; }
+  @media (max-width: 900px) {
+    .footer .section__content {
+      display: grid;
+      grid-auto-flow: row;
+      grid-template-columns: repeat(2, 1fr);
+      grid-gap: 1rem;
+      gap: 1rem;
+      grid-template-rows: repeat(4, auto);
+      grid-template-areas: "info info" "links links" "social social" "copy copy"; } }
+  @media (min-width: 900px) {
+    .footer .section__content {
+      display: grid;
+      grid-auto-flow: row;
+      grid-template-columns: repeat(3, 1fr);
+      grid-gap: 2rem;
+      gap: 2rem;
+      grid-template-rows: repeat(2, auto);
+      grid-template-areas: "info social links" "copy copy copy"; } }
 
 .form {
   box-sizing: border-box;
@@ -520,17 +592,28 @@ h6 {
   .form__error {
     visibility: none; }
 
+.map {
+  margin: auto;
+  text-align: center; }
+  .map__title {
+    margin-bottom: 0; }
+  .map__iframe {
+    margin-top: auto;
+    margin-bottom: auto;
+    width: 100%;
+    height: 500px; }
+
+/*ul*/
 .social {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+  list-style: none;
   text-align: center;
   font-size: 1.5rem; }
-  .social ul {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-    margin: 0;
-    padding: 0;
-    list-style: none; }
   .social li:not(:last-of-type) {
     margin-right: .5em; }
   .social a {
@@ -558,39 +641,135 @@ h6 {
     overflow: hidden;
     clip: rect(0 0 0 0); }
 
+.home #cover .section__content-inner {
+  grid-area: content;
+  font-size: 2em; }
+
+@media (max-width: 900px) {
+  .home #cover .section__content {
+    display: grid;
+    grid-auto-flow: row;
+    grid-template-columns: repeat(1, 1fr);
+    grid-gap: 1rem;
+    gap: 1rem;
+    grid-template-rows: repeat(1, auto);
+    grid-template-areas: "content";
+    text-align: center; }
+    .home #cover .section__content-inner {
+      text-align: center; } }
+
+@media (min-width: 900px) {
+  .home #cover .section__content {
+    display: grid;
+    grid-auto-flow: row;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 2rem;
+    gap: 2rem;
+    grid-template-rows: repeat(1, auto);
+    grid-template-areas: ". content content"; }
+    .home #cover .section__content-inner {
+      text-align: right; } }
+
+.home #about .section__title {
+  grid-area: heading;
+  text-align: center; }
+
+.home #about .section__content-inner {
+  grid-area: content;
+  margin-top: auto;
+  margin-bottom: auto; }
+
+.home #about .slider-outer {
+  grid-area: image; }
+
+@media (max-width: 900px) {
+  .home #about .section__content {
+    display: grid;
+    grid-auto-flow: row;
+    grid-template-columns: repeat(1, 1fr);
+    grid-gap: 2rem;
+    gap: 2rem;
+    grid-template-rows: repeat(3, auto);
+    grid-template-areas: "heading" "image" "content";
+    text-align: center; } }
+
+@media (min-width: 900px) {
+  .home #about .section__content {
+    display: grid;
+    grid-auto-flow: row;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 2rem;
+    gap: 2rem;
+    grid-template-rows: repeat(2, auto);
+    grid-template-areas: "heading heading" "image content"; } }
+
 .home #services .section__content {
   display: grid;
   grid-auto-flow: row;
-  grid-template-columns: repeat(6, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   grid-gap: 2rem;
   gap: 2rem;
   grid-template-rows: repeat(2, auto);
-  grid-template-areas: "heading heading heading heading heading heading"  ". card1 card1 card2 card2 ."; }
-  .home #services .section__content h2 {
-    grid-area: heading; }
+  grid-template-areas: "heading heading"  "card1 card2"; }
+  .home #services .section__content .section__title {
+    grid-area: heading;
+    text-align: center; }
   .home #services .section__content .card:nth-of-type(1) {
     grid-area: card1; }
   .home #services .section__content .card:nth-of-type(2) {
     grid-area: card2; }
+  @media (max-width: 900px) {
+    .home #services .section__content {
+      display: grid;
+      grid-auto-flow: row;
+      grid-template-columns: repeat(1, 1fr);
+      grid-gap: 2rem;
+      gap: 2rem;
+      grid-template-rows: repeat(3, auto);
+      grid-template-areas: "heading" "card1" "card2"; } }
 
-.home #testimonials .section__content {
-  display: grid;
-  grid-auto-flow: row;
-  grid-template-columns: repeat(3, 1fr);
-  grid-gap: 2rem;
-  gap: 2rem;
-  grid-template-rows: repeat(2, auto);
-  grid-template-areas: "heading  heading   heading" "card1    card2     card3"; }
-  .home #testimonials .section__content h2 {
-    grid-area: heading; }
-  @media (max-width: 700px) {
-    .home #testimonials .section__content {
-      grid-template-columns: 1fr 1fr;
-      grid-template-areas: "heading  heading" "card1    card2" "card3    card3"; } }
-  @media (max-width: 500px) {
-    .home #testimonials .section__content {
-      grid-template-columns: 1fr;
-      grid-template-areas: "heading" "card1" "card2" "card3"; } }
+.home #testimonials .section__content .section__title {
+  grid-area: heading;
+  text-align: center; }
+
+.home #testimonials .section__content .card:nth-of-type(1) {
+  grid-area: card1; }
+
+.home #testimonials .section__content .card:nth-of-type(2) {
+  grid-area: card2; }
+
+.home #testimonials .section__content .card:nth-of-type(3) {
+  grid-area: card3; }
+
+@media (max-width: 600px) {
+  .home #testimonials .section__content {
+    display: grid;
+    grid-auto-flow: row;
+    grid-template-columns: repeat(1, 1fr);
+    grid-gap: 2rem;
+    gap: 2rem;
+    grid-template-rows: repeat(2, auto);
+    grid-template-areas: "heading" "card1" "card2" "card3"; } }
+
+@media (min-width: 600px) {
+  .home #testimonials .section__content {
+    display: grid;
+    grid-auto-flow: row;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 2rem;
+    gap: 2rem;
+    grid-template-rows: repeat(3, auto);
+    grid-template-areas: "heading heading heading heading" "card1   card1   card2   card2" ".       card3   card3    ."; } }
+
+@media (min-width: 900px) {
+  .home #testimonials .section__content {
+    display: grid;
+    grid-auto-flow: row;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 2rem;
+    gap: 2rem;
+    grid-template-rows: repeat(2, auto);
+    grid-template-areas: "heading heading heading" "card1 card2 card3"; } }
 
 .home #testimonials .card__content {
   display: flex;
@@ -598,21 +777,40 @@ h6 {
   justify-content: space-between;
   height: 100%; }
 
-.home #testimonials .card:nth-of-type(1) {
-  grid-area: card1; }
+.home #contact .section__content .section__title {
+  grid-area: heading;
+  text-align: center; }
 
-.home #testimonials .card:nth-of-type(2) {
-  grid-area: card2; }
+.home #contact .section__content .form-outer {
+  grid-area: form; }
 
-.home #testimonials .card:nth-of-type(3) {
-  grid-area: card3; }
+.home #contact .section__content .map-outer {
+  grid-area: map; }
+
+@media (max-width: 900px) {
+  .home #contact .section__content {
+    display: grid;
+    grid-auto-flow: row;
+    grid-template-columns: repeat(1, 1fr);
+    grid-gap: 2rem;
+    gap: 2rem;
+    grid-template-rows: repeat(3, auto);
+    grid-template-areas: "heading" "form" "map"; } }
+
+@media (min-width: 900px) {
+  .home #contact .section__content {
+    display: grid;
+    grid-auto-flow: row;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 2rem;
+    gap: 2rem;
+    grid-template-rows: repeat(2, auto);
+    grid-template-areas: "heading heading" "map     form"; } }
 
 /** TODO
  * Button Colors, Sizes, CTA
  * add Animate.css (CREATE A SCSS PORT OF ANIMATE CSS, POST ON SCSS ISSUE)
  * Deal with aftermath of killing bootstrap
     * Text aligning, cover positioning, text sizing
-    * Reset styles (blockquotes acting up, what else?)
- * Gridify correctly (put headings, sub in a textbox)
  * https://github.com/nolimits4web/swiper
  */
