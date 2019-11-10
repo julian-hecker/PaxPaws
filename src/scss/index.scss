@@ -36,6 +36,7 @@
 @import 'components/navbar';
 @import 'components/footer';
 @import 'components/form';
+@import 'components/map';
 @import 'components/social';
 
 
@@ -50,51 +51,5 @@
  * add Animate.css (CREATE A SCSS PORT OF ANIMATE CSS, POST ON SCSS ISSUE)
  * Deal with aftermath of killing bootstrap
     * Text aligning, cover positioning, text sizing
-    * Reset styles (blockquotes acting up, what else?)
- * Gridify correctly (put headings, sub in a textbox)
  * https://github.com/nolimits4web/swiper
  */
-
-
-
-
-
-
-
-
-
-
-// <section class="section test">
-// <div class="section__background" style="background-color: red;"></div>
-// <div class="section__content">Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam et quod ducimus aperiam laudantium voluptatibus. Aspernatur eius praesentium itaque quisquam fuga assumenda voluptatem cum enim laudantium quam. Ad, odit dicta!</div>
-// </section>
-
-// .section.test {
-//   padding: 2rem;
-//   text-align: justify;
-//   display: grid;
-//   grid-gap: 2rem;
-//   @media screen and (max-width: 500px) {
-//     grid-template-areas: "both";
-//     .section__background {
-//       grid-area: "both";
-//     }
-//     .section__content {
-//       grid-area: "both";
-//     }
-//   }
-//   @media screen and (min-width: 500px) {
-//     grid-template-columns: 1fr 1fr;
-//     grid-template-areas: "background content";
-//     .section__background {
-//       grid-area: background;
-//       height: 100%;
-//     }
-//     .section__content {
-//       grid-area: content;
-//     }
-//   }
-// }
-
-
-
