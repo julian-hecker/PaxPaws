@@ -14,121 +14,42 @@
 
 
 // === Libraries === //
-@import 'abstracts/library-overrides';
+@import 'libraries/library-overrides';
 
+@import 'libraries/gridify/gridify-mixins';
+@import 'libraries/bootstrap-container/bootstrap-container';
+@import 'libraries/fontawesome/scss/brands.scss';
 
 // === Base === //
-
 @import 'bases/reset';
 @import 'bases/base';
 @import 'bases/typography';
-@font-face {
-  font-family: 'Changa One';
-  font-style: normal;
-  font-weight: 400;
-  font-display: swap;
-  src: local('Changa One'), local('ChangaOne'), url(../assets/webfonts/changa-one/changa-one.woff2) format('woff2');
-  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
-}
-
-
-// === Layouts === //
-@import 'layouts/section';
-
-
-
-
-
-
-
-.banner {
-
-}
-
-
-.trifold {
-
-
-
-}
-
-
-
-.form {
-
-}
-
-
-
-.newsletter {
-
-}
-
 
 
 
 
 // === Components === //
+@import 'components/section';
+
 @import 'components/button';
 @import 'components/card';
 @import 'components/navbar';
+@import 'components/footer';
+@import 'components/form';
+@import 'components/map';
 @import 'components/social';
 
 
-// === Pages === //
-.home {
-
-}
-
+// === Layouts === //
+// Refactor layouts at some future date
+// https://philipwalton.com/articles/css-architecture/
+@import 'layouts/home';
 
 
 /** TODO
  * Button Colors, Sizes, CTA
  * add Animate.css (CREATE A SCSS PORT OF ANIMATE CSS, POST ON SCSS ISSUE)
- * Fix row gap (reimplement with CSS Grid12?)
- * Design: Form, Services, Team, footer
+ * Deal with aftermath of killing bootstrap
+    * Text aligning, cover positioning, text sizing
+ * https://github.com/nolimits4web/swiper
  */
-
-
-
-
-
-
-
-
-
-
-// <section class="section test">
-// <div class="section__background" style="background-color: red;"></div>
-// <div class="section__content">Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam et quod ducimus aperiam laudantium voluptatibus. Aspernatur eius praesentium itaque quisquam fuga assumenda voluptatem cum enim laudantium quam. Ad, odit dicta!</div>
-// </section>
-
-.section.test {
-  padding: 2rem;
-  text-align: justify;
-  display: grid;
-  grid-gap: 2rem;
-  @media screen and (max-width: 500px) {
-    grid-template-areas: "both";
-    .section__background {
-      grid-area: "both";
-    }
-    .section__content {
-      grid-area: "both";
-    }
-  }
-  @media screen and (min-width: 500px) {
-    grid-template-columns: 1fr 1fr;
-    grid-template-areas: "background content";
-    .section__background {
-      grid-area: background;
-      height: 100%;
-    }
-    .section__content {
-      grid-area: content;
-    }
-  }
-}
-
-
-

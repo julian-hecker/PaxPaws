@@ -1,0 +1,172 @@
+@warn bkpt(sm);
+
+.home {
+
+  #cover {
+    .section__content {
+      &-inner {
+        grid-area: content;
+        font-size: 2em;
+      }
+
+      @media (max-width: bkpt(md)) {
+        @include gridify(1, 1rem, 1);
+        grid-template-areas: "content";
+        text-align: center;
+        &-inner {
+          text-align: center;
+        }
+      }
+      @media (min-width: bkpt(md)) {
+        @include gridify(3, 2rem, 1);
+        grid-template-areas:
+        ". content content";
+        &-inner {
+          text-align: right;
+        }
+      }
+      
+    }
+  }
+
+
+  #about {
+    .section__title {
+      grid-area: heading;
+      text-align: center;
+    }
+    .section__content-inner {
+      grid-area: content;
+      margin-top: auto;
+      margin-bottom: auto;
+    }
+    .slider-outer {
+      grid-area: image;
+    }
+    @media (max-width: bkpt(md)) {
+      .section__content {
+        @include gridify(1, 2rem, 3);
+        grid-template-areas: 
+        "heading"
+        "image"
+        "content";
+
+        text-align: center;
+      }
+    }
+    @media (min-width: bkpt(md)) {
+      .section__content {
+        @include gridify(2, 2rem, 2);
+        grid-template-areas: 
+          "heading heading"
+          "image content";
+      }
+    }
+  }
+
+  #services {
+    .section__content {
+      .section__title {
+        grid-area: heading;
+        text-align: center;
+      }
+      .card:nth-of-type(1) {
+        grid-area: card1;
+      }
+      .card:nth-of-type(2) {
+        grid-area: card2;
+      }
+
+      @media (max-width: bkpt(md)) {
+        @include gridify(1, 2rem, 3);
+        grid-template-areas: 
+          "heading"
+          "card1"
+          "card2";
+      }
+
+      @include gridify(2, 2rem, 2);
+      grid-template-areas:
+        "heading heading" 
+        "card1 card2";
+    }
+  }
+
+  #testimonials {
+    .section__content {
+      .section__title {
+        grid-area: heading;
+        text-align: center;
+      }
+      .card:nth-of-type(1) {
+        grid-area: card1;
+      }
+      .card:nth-of-type(2) {
+        grid-area: card2;
+      }
+      .card:nth-of-type(3) {
+        grid-area: card3;
+      }
+  
+      @media (max-width: bkpt(sm)) {
+        @include gridify(1, 2rem, 2);
+        grid-template-areas:
+        "heading"
+        "card1"
+        "card2"
+        "card3";
+      }
+      @media (min-width: bkpt(sm)) {
+        @include gridify(4, 2rem, 3);
+        grid-template-areas:
+          "heading heading heading heading"
+          "card1   card1   card2   card2"
+          ".       card3   card3    .";
+      }
+      @media (min-width: bkpt(md)) {
+        @include gridify(3, 2rem, 2);
+        grid-template-areas:
+          "heading heading heading"
+          "card1 card2 card3";
+      }
+    }
+    .card__content {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      height: 100%;
+    }
+    
+  }
+
+  #contact {
+    .section__content {
+      .section__title {
+        grid-area: heading;
+        text-align: center;
+      }
+      .form-outer {
+        grid-area: form;
+      }
+      .map-outer {
+        grid-area: map;
+      }
+
+      @media (max-width: bkpt(md)) {
+        @include gridify(1, 2rem, 3);
+        grid-template-areas:
+        "heading"
+        "form"
+        "map";
+      }
+      @media (min-width: bkpt(md)) {
+        @include gridify(2, 2rem, 2);
+        grid-template-areas:
+          "heading heading"
+          "map     form";
+      }
+    }
+  }
+
+
+}

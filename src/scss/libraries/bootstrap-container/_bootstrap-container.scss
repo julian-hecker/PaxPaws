@@ -1,0 +1,81 @@
+/*! Container based on Bootstrap Grid Container | https://github.com/twbs/bootstrap | MIT License */
+
+$grid-breakpoints: (
+  xs: 0,
+  sm: 500px,
+  md: 700px,
+  lg: 900px,
+  xl: 1200px
+) !default;
+
+$container-padding-x: 1rem;
+
+$container-max-widths: (
+  sm: 450px,
+  md: 650px,
+  lg: 850px,
+  xl: 1100px
+) !default;
+
+
+@function breakpoint-min($name, $breakpoints: $grid-breakpoints) {
+  $min: map-get($breakpoints, $name);
+  @return if($min != 0, $min, null);
+}
+
+@function breakpoint-infix($name, $breakpoints: $grid-breakpoints) {
+  @return if(breakpoint-min($name, $breakpoints) == null, "", "-#{$name}");
+}
+
+@mixin media-breakpoint-up($name, $breakpoints: $grid-breakpoints) {
+  $min: breakpoint-min($name, $breakpoints);
+  @if $min {
+    @media (min-width: $min) {
+      @content;
+    }
+  } @else {
+    @content;
+  }
+}
+
+// Generate semantic grid columns with these mixins.
+@mixin make-container($padding-x: $container-padding-x) {
+  width: 100%;
+  padding-right: $padding-x;
+  padding-left: $padding-x;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+// For each breakpoint, define the maximum width of the container in a media query
+@mixin make-container-max-widths($max-widths: $container-max-widths, $breakpoints: $grid-breakpoints) {
+  @each $breakpoint, $container-max-width in $max-widths {
+    @include media-breakpoint-up($breakpoint, $breakpoints) {
+      max-width: $container-max-width;
+    }
+  }
+}
+
+// Single container class with breakpoint max-widths
+.container {
+  @include make-container();
+  @include make-container-max-widths();
+}
+
+// Responsive containers that are 100% wide until a breakpoint
+@each $breakpoint, $container-max-width in $container-max-widths {
+
+  @include media-breakpoint-up($breakpoint, $grid-breakpoints) {
+    %responsive-container-#{$breakpoint} {
+      max-width: $container-max-width;
+    }
+
+    @each $name, $width in $grid-breakpoints {
+      @if ($container-max-width > $width or $breakpoint == $name) {
+        .container#{breakpoint-infix($name, $grid-breakpoints)} {
+          @extend %responsive-container-#{$breakpoint};
+        }
+      }
+    }
+  }
+}

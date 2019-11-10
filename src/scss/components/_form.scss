@@ -1,0 +1,81 @@
+// === Form === //
+// Based on https://codepen.io/dcode-software/pen/xxKNvgM
+
+$form-fontFamily: sans-serif;
+$form-heading-fontFamily: 'Changa One';
+$form-field-backgroundColor: #eee;
+
+.form {
+  box-sizing: border-box;
+  margin-right: auto; margin-left: auto;
+  margin-bottom: .5rem;
+  max-width: 500px;
+
+  font-family: $form-fontFamily;
+  line-height: 1.5;
+  * {
+    box-sizing: inherit;
+    margin-bottom: .5rem;
+    font-family: inherit;
+  }
+  &__title {
+    margin-bottom: 0;
+    font-family: $form-heading-fontFamily;
+    font-size: 2rem;
+    text-align: center;
+  }
+  &__desc {
+    margin-top: 0;
+    text-align: center;
+  }
+  &__item {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  &__label {
+    font-weight: bolder;
+  }
+  &__input {
+    padding: .5rem;
+    width: 100%;
+
+    background-color: #f9f9f9;
+    border: .1rem solid #bbb;
+    border-radius: .25rem;
+    font-size: 1.25em;
+    transition: background-color 250ms, border-color 250ms, color 250ms;
+    &::placeholder {
+      color: #ccc;
+    }
+    @include hfa {
+      background-color: #fff;
+    }
+    &:invalid {
+      outline-color: red;
+      color: red;
+    }
+    &--small {
+      max-width: 250px;
+    }
+    &.textarea {
+      min-height: 5em;
+      resize: none;
+    }
+  }
+  &__error {
+    visibility: none;
+  }
+  &__button {
+    // @extend .button;
+
+    // inherit hover/active styles from button class
+    // &:hover {
+
+    // }
+    // &:active {
+ 
+    // }
+  }
+  
+}

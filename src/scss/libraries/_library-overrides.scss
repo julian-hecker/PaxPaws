@@ -1,0 +1,51 @@
+// === Library Overrides === //
+
+// === FontAwesome === //
+$fa-font-path:         "../assets/webfonts/fontawesome";
+
+@import '../libraries/fontawesome/scss/variables';
+
+
+// === Icons | Depend on FontAwesome 5 === //
+
+@mixin icon($content: "\f000") {
+  font-family: 'Font Awesome 5 Brands';
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  display: inline-block;
+  font-style: normal;
+  font-variant: normal;
+  text-rendering: auto;
+  line-height: 1;
+  &::before {
+    content: $content;
+  }
+}
+
+.facebook {
+  @include icon(fa-content($fa-var-facebook-f));
+  @include hfa() {
+    color: #3b5998;
+  }
+}
+
+.yelp {
+  @include icon(fa-content($fa-var-yelp));
+  @include hfa() {
+    color: #d32323;
+  }
+}
+
+.instagram {
+  @include icon(fa-content($fa-var-instagram));
+  @include hfa() {
+    color: #fcaf45;
+  }
+}
+
+.google {
+  @include icon(fa-content($fa-var-google));
+  @include hfa() {
+    color: #0f9d58;
+  }
+}

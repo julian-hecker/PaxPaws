@@ -22,17 +22,27 @@ a {
 }
 
 
-h1, h2, h3, h4, h5, h6, p, .button, address {
-  margin-bottom: .5em;
+h1, h2, h3, h4, h5, h6, p, address {
+  margin-top: 0;
+  margin-bottom: 1rem;
 }
 
 img {
   max-width: 100%;
 }
 
+blockquote {
+  margin: 0;
+}
 
 @media (max-width: 320px) {
   html, body {
     min-width: 320px;
   }
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
 }

@@ -1,6 +1,6 @@
 $navbar-bkpt: bkpt(md);
 $navbar-bg: color(light);
-$navbar-color: color(secondary);
+$navbar-color: color(primary);
 
 
 .navbar {
@@ -23,6 +23,7 @@ $navbar-color: color(secondary);
   }
   a {
     color: inherit;
+    font-family: 'Changa One';
     text-decoration: none;
   }
 
@@ -33,6 +34,7 @@ $navbar-color: color(secondary);
     height: 100%;
 
     &-logo {
+      padding: .5rem 0;
       width: 5rem; height: 5rem;
       border-radius: 100rem;
     }
@@ -104,6 +106,14 @@ $navbar-color: color(secondary);
       padding: .5rem;
       @include hover-grow;
       @include hover-darken-color($navbar-color);
+      &--active::after {
+        content: '';
+        position: absolute;
+        bottom: 0; left: 0;
+        width: 100%;
+        height: .25rem;
+        background-color: $navbar-color;
+      }
     }
   }
   @media (max-width: $navbar-bkpt) {

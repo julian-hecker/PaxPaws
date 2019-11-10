@@ -3,7 +3,6 @@
   display: inline-block;
   position: relative;
   padding: .5rem 1rem;
-  width: max-content;
 
   background-color: transparent;
   border: .1rem solid;
@@ -29,7 +28,7 @@
     border-color: currentColor;
     color: currentColor;
   }
-  &--disabled {
+  &--disabled, &[disabled] {
     opacity: .65;
     pointer-events: none;
   }

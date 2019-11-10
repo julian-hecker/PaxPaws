@@ -1,16 +1,16 @@
 // === Social === //
-.social {
+
+/*ul*/.social {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+  list-style: none;
   text-align: center;
   font-size: 1.5rem;
-  ul {
-      display: flex;
-      flex-direction: row;
-      flex-wrap: wrap;
-      justify-content: center;
-      margin: 0;
-      padding: 0;
-      list-style: none;
-    }
+
   li {
     &:not(:last-of-type) {
       margin-right: .5em;
@@ -28,41 +28,6 @@
   }
   .label {
     @include is-invisible;
-  }
-}
-
-
-// === Icons | Depend on FontAwesome 5 === //
-
-.facebook {
-  @extend .fab;
-  @extend .fa-facebook-f;
-  @include hfa() {
-    color: #3b5998;
-  }
-}
-
-.instagram {
-  @extend .fab;
-  @extend .fa-instagram;
-  @include hfa() {
-    color: #fcaf45;
-  }
-}
-
-.yelp {
-  @extend .fab;
-  @extend .fa-yelp;
-  @include hfa() {
-    color: #d32323;
-  }
-}
-
-.google {
-  @extend .fab;
-  @extend .fa-google;
-  @include hfa() {
-    color: #0f9d58;
   }
 }
 
