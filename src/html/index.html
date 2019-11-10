@@ -43,7 +43,7 @@
       
       <nav class="navbar__nav" id="navbar__nav">
         <ul class="navbar__links">
-          <li class="navbar__links-item">
+          <li class="navbar__links-item navbar__links-item--active">
             <a class="navbar__links-link" href="index.html#">Home</a>
           </li>
           <li class="navbar__links-item">
@@ -87,7 +87,7 @@
       
       <section id="services" class="section">
         <div class="section__content container">
-          <h2>What do we do?</h2>
+          <h2 class="section__title">What do we do?</h2>
           <div class="card card--shadow card__content">
             <p>Pet Sitting while you're away so you can make sure your pets are getting the best love and care they can get!</p>
             <a class="button" href="services.html#sitting">More about sitting -></a>
@@ -101,7 +101,7 @@
 
       <section id="testimonials" class="section">
         <div class="section__content container">
-          <h2>Our Happy Clients</h2>
+          <h2 class="section__title">Our Happy Clients</h2>
           <div class="card card--shadow">
             <div class="card__content">
               <blockquote>
@@ -110,7 +110,7 @@
               </blockquote>
             </div>
           </div>
-          <div class="card card--dark card--shadow card--interactive">
+          <div class="card card--dark card--shadow">
             <div class="card__content">
               <blockquote>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam, quaerat? Lorem ipsum dolor sit amet consectetur adipisicing elit. Id inventore consectetur similique nulla quis eum molestias! Sequi voluptates aspernatur omnis?</p>
@@ -131,12 +131,16 @@
       </section>
       <section id="contact" class="section">
         <div class="section__content container">
-          <div class="text">
+          <div class="section__title">
             <h2>Get in Touch with us!</h2>
             <p>Give us a call at <a href="tel:+15164187297">(516) 418 - PAWS</a> and meet with us for free!</p>
           </div>
           <div class="map-outer">
-
+            <div class="map">
+              <h3 class="map__title">Where we serve</h3>
+              <p class="map__desc">We are based in Bellmore/Merrick, and can serve from Freeport to Massapequa to Levittown!</p>
+              <iframe class="map__iframe" width="100" height="100" frameborder="0" scrolling="yes" marginheight="0" marginwidth="0" src="https://www.openstreetmap.org/export/embed.html?bbox=-73.6016349750571%2C40.64525593917155%2C-73.49125670967624%2C40.69076253648566&amp;layer=hot"></iframe>
+            </div>
           </div>
           <div class="form-outer">
             <form class="form" action="paxpawspets.com" method="GET">
@@ -148,7 +152,7 @@
               </div>
               <div class="form__item">
                 <label class="form__label" for="forminput-phone">Phone</label>
-                <input class="form__input" name="phone" id="forminput-phone" type="tel" required pattern="^([0-9]{0,3}(-?\d{3})-?)(\d{3})(-?\d{4})$" placeholder="516-123-4567">
+                <input class="form__input" name="phone" id="forminput-phone" type="tel" required pattern="^([0-9]{0,3}(-?\d{3})-?)(\d{3})(-?\d{4})$" placeholder="516-418-7297">
               </div>
               <div class="form__item">
                 <label class="form__label" for="forminput-message">Message</label>
