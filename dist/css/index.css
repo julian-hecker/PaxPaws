@@ -595,8 +595,6 @@ h6 {
 .map {
   margin: auto;
   text-align: center; }
-  .map__title {
-    margin-bottom: 0; }
   .map__iframe {
     margin-top: auto;
     margin-bottom: auto;
