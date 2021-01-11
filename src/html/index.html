@@ -22,7 +22,7 @@
 <body>
   <div class="wrapper">
     <header class="navbar">
-      <a class="navbar__branding" href="index.html#">
+      <a class="navbar__branding" href="#">
         <img class="navbar__branding-logo" alt="Logos" src="assets/images/paxpawslogo.svg" />
         <div class="navbar__branding-text">
           <h1 class="navbar__branding-name">Pax Paws</h1>
@@ -44,16 +44,19 @@
       <nav class="navbar__nav" id="navbar__nav">
         <ul class="navbar__links">
           <li class="navbar__links-item navbar__links-item--active">
-            <a class="navbar__links-link" href="index.html#">Home</a>
+            <a class="navbar__links-link" href="#">Home</a>
           </li>
           <li class="navbar__links-item">
-            <a class="navbar__links-link" href="about.html#">About Us</a>
+            <a class="navbar__links-link" href="#about">About Us</a>
           </li>
           <li class="navbar__links-item">
-            <a class="navbar__links-link" href="blog.html#">Blog</a>
+            <a class="navbar__links-link" href="#services">Services</a>
           </li>
           <li class="navbar__links-item">
-            <a class="navbar__links-link" href="services.html#">Services</a>
+            <a class="navbar__links-link" href="#testimonials">Clients</a>
+          </li>
+          <li class="navbar__links-item">
+            <a class="navbar__links-link" href="#contact">Contact</a>
           </li>
         </ul> <!-- /.links -->
       </nav>
@@ -71,8 +74,8 @@
           <div class="section__content-inner">
             <p>Pet Services in South Nassau, NY</p>
             <h2>The Care your Pets Deserve</h2>
-            <p>Call us! <a class="button button--no-border" href="tel:+15164187297">(516) 418 - PAWS</a></p>
             <p>We'd be super excited to talk to you and meet your pets!</p>
+            <a class="cover-cta" href="tel:+15164187297">Give us a call!<br/><small>(516) 418 - PAWS</small></a>
           </div>
         </div>
       </section>
@@ -85,8 +88,11 @@
             <img src="assets/images/team.jpg" alt="Julian & Valeria"/>
           </div>
           <div class="section__content-inner">
-            <p>Julian and Valeria are pet experts, working in the field since early 2017.</p> 
-            <p><a class="button" href="about.html">Learn more about us! -></a></p>
+            <p>Julian and Valeria are pet experts, working in the field since early 2017. We've cared for dozens of pets, including our own!</p>
+            <p>For us, there's nothing in this world like the love and loyalty a pet can give to you. That's why we love our work.</p>
+            <p>Valeria's a student at Farmingdale State College where she's studying to be a Dental Hygienist. She's the inspiration for Pax Paws and we wouldn't be here doing this without her.</p>
+            <p>Julian is her long-time boyfriend, business partner, and tech guy. He runs the website and VoIP system we use.</p>
+            <p>It would truly be a pleasure to get to meet you in person, but especially your little pets!</p>
           </div>
         </div>
       </section>
@@ -95,13 +101,16 @@
         <div class="section__content container">
           <h2 class="section__title">What do we do?</h2>
           <div class="card card--shadow card__content">
-            <p>Pet Sitting while you're away so you can make sure your pets are getting the best love and care they can get!</p>
-            <a class="button" href="services.html#sitting">More about sitting -></a>
+            <h3>Pet Sitting</h3>
+            <p>We'll come over while you're away so you can make sure your pets are getting the best love and care they can get!</p>
+            <p><strong>Cost: </strong>25$ for a half hour visit, $35 for an hour.</p>
           </div>
           <div class="card card--shadow card__content">
-            <p>Dog walking and running so your dogs can get all the exercise they need even on your busy schedule!</p>
-            <a disabled class="button button--round button--disabled" href="services.html#walking" tabindex="-1">More about walking -></a>
+            <h3>Dog Walking</h3>
+            <p>We'll run or walk your dogs so they can get all the exercise they need even on your busy schedule!</p>
+            <p><strong>Cost: </strong>$25 for 30 minutes, $35 for an hour.</p>
           </div>
+          <p><em>Unfortunately, we can't do boarding services at this time.</em></p>
         </div>
       </section>
 
@@ -169,7 +178,6 @@
                 <textarea class="form__input textarea" name="message" id="forminput-message" required placeholder="How can we help you out?"></textarea>
               </div>
               <div class="form__item">
-                <label class="form__label" for="forminput-phone">Submit</label>
                 <input class="form__input form__button" name="submit" id="forminput-phone" type="submit">
               </div>
             </form>
@@ -190,16 +198,11 @@
         <nav class="footer__category footer__category--links">
           <ul>
             <li class="footer__category-title">Links</li>
-            <li><a class="footer__link" href="index.html">Home</a></li>
-            <li><a class="footer__link" href="about.html">About Us</a></li>
-            <li><a class="footer__link" href="blog.html">Blog</a></li>
-            <li><a class="footer__link" href="services.html">Services</a></li>
-          </ul>
-          <ul>
-            <li class="footer__category-title">Legal</li>
-            <li><a class="footer__link" href="privacy.html">Privacy</a></li>
-            <!-- <li><a class="footer__link" href="cookies.html">Cookies</a></li> -->
-            <!-- <li><a class="footer__link" href="terms.html">Terms</a></li> -->
+            <li><a class="footer__link" href="#">Home</a></li>
+            <li><a class="footer__link" href="#about">About Us</a></li>
+            <li><a class="footer__link" href="#services">Services</a></li>
+            <li><a class="footer__link" href="#testimonials">Clients</a></li>
+            <li><a class="footer__link" href="#contact">Contact</a></li>
           </ul>
         </nav>
         <nav class="footer__category footer__category--social">
@@ -218,7 +221,7 @@
           </div>
         </nav>
         <nav class="footer__category footer__category--copyright">
-          <p>Copyright&nbsp;&copy;&nbsp;2017-2019&nbsp;Pax&nbsp;Paws.&nbsp;<wbr/>Made&nbsp;with&nbsp;❤️&nbsp;by&nbsp;<a href="https://github.com/julian-hecker/" target="_blank">Julian&nbsp;Hecker</a></p>
+          <p>Copyright&nbsp;&copy;&nbsp;2017-2021&nbsp;Pax&nbsp;Paws.&nbsp;<wbr/>Made&nbsp;with&nbsp;❤️&nbsp;by&nbsp;<a href="https://github.com/julian-hecker/" target="_blank">Julian&nbsp;Hecker</a></p>
         </nav>
       </div>
 
@@ -227,8 +230,3 @@
   <!-- wrapper -->
 </body>
 </html>
-
-<!-- 
-Image slider for "who are we" sections
-
- -->
