@@ -67,15 +67,7 @@ $form-field-backgroundColor: #eee;
     visibility: none;
   }
   &__button {
-    // @extend .button;
-
-    // inherit hover/active styles from button class
-    // &:hover {
-
-    // }
-    // &:active {
- 
-    // }
+    background: none;
   }
   
 }

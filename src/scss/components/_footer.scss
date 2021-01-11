@@ -52,9 +52,13 @@ $footer-bkpt: bkpt(md);
   .section__content {
     @media (max-width: $footer-bkpt) {
       @include gridify(2, 1rem, 4);
+      // grid-template-areas:
+      //   "info info"
+      //   "links links"
+      //   "social social"
+      //   "copy copy";
       grid-template-areas:
-        "info info"
-        "links links"
+        "info links"
         "social social"
         "copy copy";
     }
