@@ -7,7 +7,7 @@ const gulpConcat = require('gulp-concat');
 const gulpImagemin = require('gulp-imagemin');
 const gulpPostcss = require('gulp-postcss');
 const gulpRename = require('gulp-rename');
-const gulpSass = require('gulp-sass');
+const gulpSass = require('gulp-sass')(require('sass'));
 const gulpHtmlmin = require('gulp-htmlmin');
 const gulpUglify = require('gulp-uglify');
 
